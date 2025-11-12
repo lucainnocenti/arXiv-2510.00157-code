@@ -1,0 +1,1240 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     43457,       1232]
+NotebookOptionsPosition[     41302,       1192]
+NotebookOutlinePosition[     41754,       1209]
+CellTagsIndexPosition[     41711,       1206]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"::", "Section", "::"}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"1.", " ", "Pauli"}], "\[RightArrow]", 
+    RowBox[{"binary", " ", "symplectic", " ", "vector"}]}], "*)"}], 
+  RowBox[{
+   RowBox[{"ClearAll", "[", "pauliBinary", "]"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"pauliBinary", "[", "s_String", "]"}], "/;", 
+     RowBox[{"StringMatchQ", "[", 
+      RowBox[{"s", ",", 
+       RowBox[{"RegularExpression", "[", "\"\<[IXYZ]+\>\"", "]"}]}], "]"}]}], 
+    ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"c", "=", 
+        RowBox[{"Characters", "[", "s", "]"}]}], "}"}], ",", 
+      RowBox[{"Join", "[", 
+       RowBox[{
+        RowBox[{"c", "/.", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<I\>\"", "->", "0"}], ",", 
+           RowBox[{"\"\<Z\>\"", "->", "0"}], ",", 
+           RowBox[{"\"\<X\>\"", "->", "1"}], ",", 
+           RowBox[{"\"\<Y\>\"", "->", "1"}]}], "}"}]}], ",", 
+        RowBox[{"(*", 
+         RowBox[{"x", " ", "bits"}], "*)"}], 
+        RowBox[{"c", "/.", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<I\>\"", "->", "0"}], ",", 
+           RowBox[{"\"\<X\>\"", "->", "0"}], ",", 
+           RowBox[{"\"\<Z\>\"", "->", "1"}], ",", 
+           RowBox[{"\"\<Y\>\"", "->", "1"}]}], "}"}]}]}], "   ", 
+       RowBox[{"(*", 
+        RowBox[{"z", " ", "bits"}], "*)"}], "]"}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Test", " ", "pauliBinary"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<pauliBinary[\\\"IXYZ\\\"] == \>\"", ",", 
+      RowBox[{"pauliBinary", "[", "\"\<IXYZ\>\"", "]"}], ",", 
+      "\"\<   (expect {0,1,1,0, 0,0,1,1})\>\""}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"::", "Section", "::"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"2.", " ", "Symplectic", " ", "inner", " ", "product"}], "*)"}], 
+   "\n", "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "symplecticProduct", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"symplecticProduct", "[", 
+     RowBox[{"u_List", ",", "v_List"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"n", "=", 
+         RowBox[{
+          RowBox[{"Length", "[", "u", "]"}], "/", "2"}]}], ",", "xu", ",", 
+        "zu", ",", "xv", ",", "zv"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"xu", ",", "zu"}], "}"}], "=", 
+        RowBox[{"TakeDrop", "[", 
+         RowBox[{"u", ",", "n"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"xv", ",", "zv"}], "}"}], "=", 
+        RowBox[{"TakeDrop", "[", 
+         RowBox[{"v", ",", "n"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Mod", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"xu", ".", "zv"}], "+", 
+          RowBox[{"zu", ".", "xv"}]}], ",", "2"}], "]"}]}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Test", " ", 
+     RowBox[{"symplecticProduct", ":", 
+      RowBox[{
+       RowBox[{
+       "X", " ", "on", " ", "qubit", " ", "1", "  ", "vs", "  ", "Z", " ", 
+        "on", " ", "qubit", " ", "1", " ", "anticommutes"}], 
+       "\[DoubleRightArrow]", "1"}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"vX1", "=", 
+     RowBox[{"pauliBinary", "[", "\"\<XIII\>\"", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"vZ1", "=", 
+     RowBox[{"pauliBinary", "[", "\"\<ZIII\>\"", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<symplecticProduct[XIII, ZIII] = \>\"", ",", 
+      RowBox[{"symplecticProduct", "[", 
+       RowBox[{"vX1", ",", "vZ1"}], "]"}], ",", "\"\<   (expect 1)\>\""}], 
+     "]"}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"::", "Section", "::"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"3.", " ", "Pauli", " ", "weight", " ", 
+     RowBox[{"(", "fixed", ")"}]}], "*)"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "pauliWeight", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"pauliWeight", "[", "v_List", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"n", "=", 
+         RowBox[{
+          RowBox[{"Length", "[", "v", "]"}], "/", "2"}]}], ",", "x", ",", 
+        "z"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "z"}], "}"}], "=", 
+        RowBox[{"TakeDrop", "[", 
+         RowBox[{"v", ",", "n"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Total", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Boole", "[", 
+           RowBox[{
+            RowBox[{"#1", "==", "1"}], "||", 
+            RowBox[{"#2", "==", "1"}]}], "]"}], "&"}], "@@@", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "z"}], "}"}], "]"}]}], "]"}]}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Test", " ", "pauliWeight"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<pauliWeight[pauliBinary /@ {\\\"IIII\\\",\\\"XIII\\\",\\\"YYII\\\",\
+\\\"XYZI\\\"}] = \>\"", ",", 
+      RowBox[{"pauliWeight", "[", 
+       RowBox[{"pauliBinary", "[", "\"\<IIII\>\"", "]"}], "]"}], ",", 
+      "\"\<, \>\"", ",", 
+      RowBox[{"pauliWeight", "[", 
+       RowBox[{"pauliBinary", "[", "\"\<XIII\>\"", "]"}], "]"}], ",", 
+      "\"\<, \>\"", ",", 
+      RowBox[{"pauliWeight", "[", 
+       RowBox[{"pauliBinary", "[", "\"\<YYII\>\"", "]"}], "]"}], ",", 
+      "\"\<, \>\"", ",", 
+      RowBox[{"pauliWeight", "[", 
+       RowBox[{"pauliBinary", "[", "\"\<XYZI\>\"", "]"}], "]"}], ",", 
+      "\"\<   (expect 0,1,2,3)\>\""}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"::", "Section", "::"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"4.", " ", "allCommuteQ", " ", "and", " ", "independentRank"}], 
+    "*)"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "allCommuteQ", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"allCommuteQ", "[", 
+     RowBox[{"mat_", "?", "MatrixQ"}], "]"}], ":=", 
+    RowBox[{"And", "@@", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"symplecticProduct", "[", 
+          RowBox[{
+           RowBox[{"mat", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"mat", "[", 
+            RowBox[{"[", "j", "]"}], "]"}]}], "]"}], "==", "0"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", "mat", "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", 
+          RowBox[{"i", "+", "1"}], ",", 
+          RowBox[{"Length", "[", "mat", "]"}]}], "}"}]}], "]"}], "]"}]}]}], 
+   "\n", "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "independentRank", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"independentRank", "[", 
+     RowBox[{"mat_", "?", "MatrixQ"}], "]"}], ":=", 
+    RowBox[{"MatrixRank", "[", 
+     RowBox[{"mat", ",", 
+      RowBox[{"Modulus", "->", "2"}]}], "]"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Test", " ", "allCommuteQ"}], "&"}], " ", "independentRank"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"mat1", "=", 
+     RowBox[{"pauliBinary", "/@", 
+      RowBox[{"{", 
+       RowBox[{"\"\<XX\>\"", ",", "\"\<XZ\>\""}], "}"}]}]}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"these", " ", "anticommute"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"mat2", "=", 
+     RowBox[{"pauliBinary", "/@", 
+      RowBox[{"{", 
+       RowBox[{"\"\<XX\>\"", ",", "\"\<YY\>\""}], "}"}]}]}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"commute", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"both", " ", "weight"}], "-", 
+       RowBox[{"2", " ", "on", " ", "same", " ", "qubits"}]}], ")"}]}], 
+    "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<allCommuteQ[mat1] = \>\"", ",", 
+      RowBox[{"allCommuteQ", "[", "mat1", "]"}], ",", 
+      "\"\<   (expect False)\>\""}], "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<allCommuteQ[mat2] = \>\"", ",", 
+      RowBox[{"allCommuteQ", "[", "mat2", "]"}], ",", 
+      "\"\<   (expect True)\>\""}], "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<independentRank[{{1,0,0,0},{0,1,0,0}}] = \>\"", ",", 
+      RowBox[{"independentRank", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1", ",", "0", ",", "0"}], "}"}]}], "}"}], "]"}], 
+      ",", "\"\<   (expect 2)\>\""}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{"::", "Section", "::"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"5.", " ", "Build", " ", "stabiliser", " ", "span"}], "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "StabilizerSpan", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"StabilizerSpan", "[", 
+     RowBox[{"mat_", "?", "MatrixQ"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"r", "=", 
+        RowBox[{"Length", "[", "mat", "]"}]}], "}"}], ",", 
+      RowBox[{"DeleteDuplicates", "[", 
+       RowBox[{"Mod", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Tuples", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "1"}], "}"}], ",", "r"}], "]"}], ".", "mat"}], 
+         ",", "2"}], "]"}], "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Test", " ", "StabilizerSpan"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"testMat", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1", ",", "0", ",", "0"}], "}"}]}], "}"}]}], ";"}], 
+   "\n", 
+   RowBox[{
+    RowBox[{"span", "=", 
+     RowBox[{"StabilizerSpan", "[", "testMat", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<StabilizerSpan[testMat] length = \>\"", ",", 
+      RowBox[{"Length", "[", "span", "]"}], ",", "\"\<   (expect 4)\>\""}], 
+     "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Span elements: \>\"", ",", "span"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{"::", "Section", "::"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"6.", " ", "Minimal"}], "-", 
+     RowBox[{"weight", " ", "logical", " ", "operator"}]}], "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "minWeightLogical", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"minWeightLogical", "[", 
+     RowBox[{"mat_", "?", "MatrixQ"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"n", "=", 
+         RowBox[{
+          RowBox[{"Length", "[", 
+           RowBox[{"First", "[", "mat", "]"}], "]"}], "/", "2"}]}], ",", 
+        "allPaulis", ",", "commuting", ",", "stabSpace", ",", "logical"}], 
+       "}"}], ",", 
+      RowBox[{
+       RowBox[{"allPaulis", "=", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{
+          RowBox[{"Range", "[", 
+           RowBox[{"0", ",", 
+            RowBox[{
+             RowBox[{"2", "^", 
+              RowBox[{"(", 
+               RowBox[{"2", " ", "n"}], ")"}]}], "-", "1"}]}], "]"}], ",", 
+          "2", ",", 
+          RowBox[{"2", " ", "n"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"commuting", "=", 
+        RowBox[{"Select", "[", 
+         RowBox[{"allPaulis", ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"v", ",", 
+            RowBox[{"AllTrue", "[", 
+             RowBox[{"mat", ",", 
+              RowBox[{"Function", "[", 
+               RowBox[{"row", ",", 
+                RowBox[{
+                 RowBox[{"symplecticProduct", "[", 
+                  RowBox[{"v", ",", "row"}], "]"}], "==", "0"}]}], "]"}]}], 
+             "]"}]}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"stabSpace", "=", 
+        RowBox[{"StabilizerSpan", "[", "mat", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"logical", "=", 
+        RowBox[{"Complement", "[", 
+         RowBox[{"commuting", ",", "stabSpace"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"logical", "===", 
+          RowBox[{"{", "}"}]}], ",", "Infinity", ",", 
+         RowBox[{"Min", "[", 
+          RowBox[{"pauliWeight", "/@", "logical"}], "]"}]}], "]"}]}]}], 
+     "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Test", " ", "minWeightLogical", " ", "on", " ", 
+     RowBox[{"the", "[", 
+      RowBox[{"[", 
+       RowBox[{"4", ",", "2", ",", "2"}], "]"}], "]"}], " ", "canonical", " ",
+      "code"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"mat422", "=", 
+     RowBox[{"pauliBinary", "/@", 
+      RowBox[{"{", 
+       RowBox[{"\"\<XXXX\>\"", ",", "\"\<ZZZZ\>\""}], "}"}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<minWeightLogical[canonical [[4,2,2]]] = \>\"", ",", 
+      RowBox[{"minWeightLogical", "[", "mat422", "]"}], ",", 
+      "\"\<   (expect 2)\>\""}], "]"}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{"::", "Section", "::"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"7.", " ", "Top"}], "-", 
+     RowBox[{"level", " ", "routines"}]}], "*)"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "StabilizerCodeParameters", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"StabilizerCodeParameters", "[", 
+     RowBox[{"gens_List", "?", "VectorQ"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"mat", "=", 
+         RowBox[{"pauliBinary", "/@", "gens"}]}], ",", "n", ",", "k", ",", 
+        "d"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"!", 
+          RowBox[{"allCommuteQ", "[", "mat", "]"}]}], ",", 
+         RowBox[{
+         "Return", "[", 
+          "\"\<Generators do **not** mutually commute \[LongDash] not a \
+stabiliser.\>\"", "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"n", "=", 
+        RowBox[{"StringLength", "[", 
+         RowBox[{"First", "[", "gens", "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"k", "=", 
+        RowBox[{"n", "-", 
+         RowBox[{"independentRank", "[", "mat", "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"d", "=", 
+        RowBox[{"minWeightLogical", "[", "mat", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<n\>\"", "->", "n"}], ",", 
+         RowBox[{"\"\<k\>\"", "->", "k"}], ",", 
+         RowBox[{"\"\<d\>\"", "->", "d"}]}], "|>"}]}]}], "]"}]}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "Is422Code", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"Is422Code", "[", "gens_List", "]"}], ":=", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"par", "=", 
+        RowBox[{"StabilizerCodeParameters", "[", "gens", "]"}]}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"AssociationQ", "[", "par", "]"}], "&&", 
+       RowBox[{
+        RowBox[{"par", "[", "\"\<n\>\"", "]"}], "==", "4"}], "&&", 
+       RowBox[{
+        RowBox[{"par", "[", "\"\<k\>\"", "]"}], "==", "2"}], "&&", 
+       RowBox[{
+        RowBox[{"par", "[", "\"\<d\>\"", "]"}], "==", "2"}]}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{"::", "Section", "::"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"8.", " ", "Sanity", " ", "checks"}], "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"stab422", "=", 
+     RowBox[{"{", 
+      RowBox[{"\"\<XXXX\>\"", ",", "\"\<ZZZZ\>\""}], "}"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<StabilizerCodeParameters[422] = \>\"", ",", 
+      RowBox[{"StabilizerCodeParameters", "[", "stab422", "]"}]}], "]"}], 
+    ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Is422Code[422] = \>\"", ",", 
+      RowBox[{"Is422Code", "[", "stab422", "]"}], ",", 
+      "\"\<   (expect True)\>\""}], "]"}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"bad", "=", 
+     RowBox[{"{", 
+      RowBox[{"\"\<XXIY\>\"", ",", "\"\<ZIII\>\""}], "}"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Is422Code[bad] = \>\"", ",", 
+      RowBox[{"Is422Code", "[", "bad", "]"}], ",", 
+      "\"\<   (expect False)\>\""}], "]"}], ";"}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.961233212841816*^9, 3.961233212842823*^9}, {
+  3.9612332566424713`*^9, 3.961233256740057*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"cd921952-436e-c542-981c-0e4b642de7c6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"pauliBinary[\\\"IXYZ\\\"] == \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", "0", ",", "1", ",", 
+     "1"}], "}"}], 
+   "\[InvisibleSpace]", "\<\"   (expect {0,1,1,0, 0,0,1,1})\"\>"}],
+  SequenceForm[
+  "pauliBinary[\"IXYZ\"] == ", {0, 1, 1, 0, 0, 0, 1, 1}, 
+   "   (expect {0,1,1,0, 0,0,1,1})"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.9612332581523304`*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"cbb087d3-d98a-964f-aae5-054945750226"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"symplecticProduct[XIII, ZIII] = \"\>", "\[InvisibleSpace]", 
+   "1", "\[InvisibleSpace]", "\<\"   (expect 1)\"\>"}],
+  SequenceForm["symplecticProduct[XIII, ZIII] = ", 1, "   (expect 1)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.9612332581523304`*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"78111448-2ef1-984e-b50b-672be2ee7b2f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"pauliWeight[pauliBinary /@ {\\\"IIII\\\",\\\"XIII\\\",\\\"YYII\
+\\\",\\\"XYZI\\\"}] = \"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\", \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\", \"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\", \"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\"   (expect 0,1,2,3)\"\>"}],
+  SequenceForm[
+  "pauliWeight[pauliBinary /@ {\"IIII\",\"XIII\",\"YYII\",\"XYZI\"}] = ", 0, 
+   ", ", 1, ", ", 2, ", ", 3, "   (expect 0,1,2,3)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.9612332581593*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"b59d825f-fbd0-6243-ba76-647fa4cd4d98"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"allCommuteQ[mat1] = \"\>", "\[InvisibleSpace]", "False", 
+   "\[InvisibleSpace]", "\<\"   (expect False)\"\>"}],
+  SequenceForm["allCommuteQ[mat1] = ", False, "   (expect False)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.9612332581631107`*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"c10978f8-f7fd-bb42-8d16-43ee1e2786a2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"allCommuteQ[mat2] = \"\>", "\[InvisibleSpace]", "True", 
+   "\[InvisibleSpace]", "\<\"   (expect True)\"\>"}],
+  SequenceForm["allCommuteQ[mat2] = ", True, "   (expect True)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.9612332581631107`*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"24f3bfc5-8df1-a847-ad44-f7cdd7f5fc46"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"independentRank[{{1,0,0,0},{0,1,0,0}}] = \"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\"   (expect 2)\"\>"}],
+  SequenceForm[
+  "independentRank[{{1,0,0,0},{0,1,0,0}}] = ", 2, "   (expect 2)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.9612332581631107`*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"0a282ce4-c878-a74d-b5c0-1171696dd0d4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"StabilizerSpan[testMat] length = \"\>", "\[InvisibleSpace]", 
+   "4", "\[InvisibleSpace]", "\<\"   (expect 4)\"\>"}],
+  SequenceForm["StabilizerSpan[testMat] length = ", 4, "   (expect 4)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.9612332581631107`*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"f13db544-f1f4-554e-80f6-e6277626b52a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Span elements: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "0", ",", "0"}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "Span elements: ", {{0, 0, 0, 0}, {0, 1, 0, 0}, {1, 0, 0, 0}, {1, 1, 0, 0}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.9612332581681995`*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"3ef5eb1d-402c-2a42-a891-e80e9c42cfdc"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"minWeightLogical[canonical [[4,2,2]]] = \"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\"   (expect 2)\"\>"}],
+  SequenceForm["minWeightLogical[canonical [[4,2,2]]] = ", 2, "   (expect 2)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.961233258170206*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"a22431f9-52bf-404d-a575-f65447b69aa8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"StabilizerCodeParameters[422] = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"n\"\>", "\[Rule]", "4"}], ",", 
+     RowBox[{"\<\"k\"\>", "\[Rule]", "2"}], ",", 
+     RowBox[{"\<\"d\"\>", "\[Rule]", "2"}]}], "\[RightAssociation]"}]}],
+  SequenceForm[
+  "StabilizerCodeParameters[422] = ", <|"n" -> 4, "k" -> 2, "d" -> 2|>],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.9612332581722107`*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"59f66a84-c886-584b-9213-6826c62f661c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Is422Code[422] = \"\>", "\[InvisibleSpace]", "True", 
+   "\[InvisibleSpace]", "\<\"   (expect True)\"\>"}],
+  SequenceForm["Is422Code[422] = ", True, "   (expect True)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.9612332581722107`*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"ca295c93-e5f2-4540-a277-00a98a219d77"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Is422Code[bad] = \"\>", "\[InvisibleSpace]", "False", 
+   "\[InvisibleSpace]", "\<\"   (expect False)\"\>"}],
+  SequenceForm["Is422Code[bad] = ", False, "   (expect False)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9612332166438084`*^9, 3.961233258174217*^9},
+ CellLabel->
+  "During evaluation of \
+In[40]:=",ExpressionUUID->"d0ce70a1-4255-b649-a188-3f8018ea17df"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"#", ",", 
+      RowBox[{
+       RowBox[{"StabilizerCodeParameters", "[", "#", "]"}], "[", "\"\<d\>\"", 
+       "]"}]}], "}"}], "&"}], "/@", "goodStabilisersGens"}], "//", 
+  RowBox[{"Map", "@", "Column"}]}]], "Input",
+ CellChangeTimes->{{3.9612334052003727`*^9, 3.9612334586168404`*^9}},
+ CellLabel->
+  "In[145]:=",ExpressionUUID->"58c23176-2155-8047-a5af-06241d10da6a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"IIXZ\"\>", ",", "\<\"XZII\"\>"}], "}"}]},
+      {"1"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"IIXZ\"\>", ",", "\<\"XZXZ\"\>"}], "}"}]},
+      {"1"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"IIXZ\"\>", ",", "\<\"YZII\"\>"}], "}"}]},
+      {"1"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"IIXZ\"\>", ",", "\<\"YZXZ\"\>"}], "}"}]},
+      {"1"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"IIYZ\"\>", ",", "\<\"XZYZ\"\>"}], "}"}]},
+      {"1"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"IIYZ\"\>", ",", "\<\"YZII\"\>"}], "}"}]},
+      {"1"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"IIYZ\"\>", ",", "\<\"YZYZ\"\>"}], "}"}]},
+      {"1"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXX\"\>", ",", "\<\"YYYZ\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXX\"\>", ",", "\<\"YZZZ\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXY\"\>", ",", "\<\"YYYZ\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXY\"\>", ",", "\<\"YYZX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXY\"\>", ",", "\<\"YZZZ\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXY\"\>", ",", "\<\"ZZZX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXZ\"\>", ",", "\<\"YYYX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXZ\"\>", ",", "\<\"YYYY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXZ\"\>", ",", "\<\"YYZX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXZ\"\>", ",", "\<\"YYZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXZ\"\>", ",", "\<\"YZZX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXZ\"\>", ",", "\<\"YZZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXZ\"\>", ",", "\<\"ZZZX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXXZ\"\>", ",", "\<\"ZZZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYY\"\>", ",", "\<\"YYXZ\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYY\"\>", ",", "\<\"YZXX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYY\"\>", ",", "\<\"YZZZ\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYY\"\>", ",", "\<\"ZZXZ\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"YYXY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"YYZX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"YYZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"YZXX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"YZXY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"YZZX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"YZZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"ZZXX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"ZZXY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"ZZZX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXYZ\"\>", ",", "\<\"ZZZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXZZ\"\>", ",", "\<\"YZXY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XXZZ\"\>", ",", "\<\"YZYY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XYYY\"\>", ",", "\<\"YZZZ\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XYYY\"\>", ",", "\<\"ZXZZ\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XYYZ\"\>", ",", "\<\"YXZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XYYZ\"\>", ",", "\<\"YZZX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XYYZ\"\>", ",", "\<\"YZZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XYYZ\"\>", ",", "\<\"ZXZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XYYZ\"\>", ",", "\<\"ZZZX\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XYYZ\"\>", ",", "\<\"ZZZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XYZZ\"\>", ",", "\<\"YZYY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XZZZ\"\>", ",", "\<\"YYYY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"XZZZ\"\>", ",", "\<\"ZYYY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"YYYZ\"\>", ",", "\<\"ZZZY\"\>"}], "}"}]},
+      {"2"}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"]}], "}"}]], "Output",
+ CellChangeTimes->{{3.961233444003401*^9, 3.96123345906765*^9}},
+ CellLabel->
+  "Out[145]=",ExpressionUUID->"76480fed-71c8-e049-b272-55ba796e4d0d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PolynomialQuotient", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "3"], "-", "2"}], ",", 
+   RowBox[{
+    SuperscriptBox["x", "2"], "+", "x", "+", "1"}], ",", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.961303582214775*^9, 3.9613036020948467`*^9}},
+ CellLabel->
+  "In[157]:=",ExpressionUUID->"ef061038-36fb-e14d-9aa7-c4e6ef892f50"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "1"}], "+", "x"}]], "Output",
+ CellChangeTimes->{3.961303602345669*^9},
+ CellLabel->
+  "Out[157]=",ExpressionUUID->"5db99d60-0ad7-f24d-91e0-39f86d38201e"]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.961233214993099*^9},ExpressionUUID->"cf3bdaed-381c-f544-b07e-\
+1c46777b179c"]
+},
+WindowSize->{979.7142857142857, 693},
+WindowMargins->{{
+  Automatic, 38.57142857142867}, {-26.142857142857224`, Automatic}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2543e292-fedf-2e46-b769-0eb270725d38"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 17332, 453, 1969, "Input",ExpressionUUID->"cd921952-436e-c542-981c-0e4b642de7c6"],
+Cell[CellGroupData[{
+Cell[17937, 479, 614, 15, 22, "Print",ExpressionUUID->"cbb087d3-d98a-964f-aae5-054945750226"],
+Cell[18554, 496, 440, 9, 22, "Print",ExpressionUUID->"78111448-2ef1-984e-b50b-672be2ee7b2f"],
+Cell[18997, 507, 767, 15, 22, "Print",ExpressionUUID->"b59d825f-fbd0-6243-ba76-647fa4cd4d98"],
+Cell[19767, 524, 432, 9, 22, "Print",ExpressionUUID->"c10978f8-f7fd-bb42-8d16-43ee1e2786a2"],
+Cell[20202, 535, 428, 9, 22, "Print",ExpressionUUID->"24f3bfc5-8df1-a847-ad44-f7cdd7f5fc46"],
+Cell[20633, 546, 461, 10, 22, "Print",ExpressionUUID->"0a282ce4-c878-a74d-b5c0-1171696dd0d4"],
+Cell[21097, 558, 442, 9, 22, "Print",ExpressionUUID->"f13db544-f1f4-554e-80f6-e6277626b52a"],
+Cell[21542, 569, 758, 19, 22, "Print",ExpressionUUID->"3ef5eb1d-402c-2a42-a891-e80e9c42cfdc"],
+Cell[22303, 590, 454, 9, 22, "Print",ExpressionUUID->"a22431f9-52bf-404d-a575-f65447b69aa8"],
+Cell[22760, 601, 621, 14, 22, "Print",ExpressionUUID->"59f66a84-c886-584b-9213-6826c62f661c"],
+Cell[23384, 617, 422, 9, 22, "Print",ExpressionUUID->"ca295c93-e5f2-4540-a277-00a98a219d77"],
+Cell[23809, 628, 424, 9, 22, "Print",ExpressionUUID->"d0ce70a1-4255-b649-a188-3f8018ea17df"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24282, 643, 449, 12, 28, "Input",ExpressionUUID->"58c23176-2155-8047-a5af-06241d10da6a"],
+Cell[24734, 657, 15801, 505, 260, "Output",ExpressionUUID->"76480fed-71c8-e049-b272-55ba796e4d0d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40572, 1167, 368, 10, 31, "Input",ExpressionUUID->"ef061038-36fb-e14d-9aa7-c4e6ef892f50"],
+Cell[40943, 1179, 193, 5, 55, "Output",ExpressionUUID->"5db99d60-0ad7-f24d-91e0-39f86d38201e"]
+}, Open  ]],
+Cell[41151, 1187, 147, 3, 48, "Input",ExpressionUUID->"cf3bdaed-381c-f544-b07e-1c46777b179c"]
+}
+]
+*)
+
