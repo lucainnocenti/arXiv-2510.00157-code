@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1313645,      35443]
-NotebookOptionsPosition[   1290875,      35065]
-NotebookOutlinePosition[   1291309,      35082]
-CellTagsIndexPosition[   1291266,      35079]
+NotebookDataLength[   1199060,      32374]
+NotebookOptionsPosition[   1176811,      32006]
+NotebookOutlinePosition[   1177245,      32023]
+CellTagsIndexPosition[   1177202,      32020]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -462,7 +462,7 @@ Cell[BoxData[{
    3.96277274370891*^9}, {3.962784613117583*^9, 3.962784619206379*^9}, 
    3.963226847962352*^9, {3.971945547314146*^9, 3.971945553642351*^9}, {
    3.971955027138815*^9, 3.97195511251543*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"d056f2f9-97ac-394d-be8b-3aa2a2989959"],
+ CellLabel->"In[1]:=",ExpressionUUID->"d056f2f9-97ac-394d-be8b-3aa2a2989959"],
 
 Cell[BoxData[{
  RowBox[{
@@ -2498,3093 +2498,16 @@ Cell[BoxData["19"], "Output",
   "Out[743]=",ExpressionUUID->"7d3b5731-7c02-784b-9eba-f5b467e243c9"]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"inequivalentGenerators3q", "=", 
-   RowBox[{"Select", "[", 
-    RowBox[{
-     RowBox[{"DeleteDuplicates", "[", 
-      RowBox[{"sortString", "/@", 
-       RowBox[{"Rest", "@", 
-        RowBox[{"allPauliStrings", "@", "3"}]}]}], "]"}], ",", 
-     RowBox[{
-      RowBox[{"Not", "@", 
-       RowBox[{"StringContainsQ", "[", 
-        RowBox[{"#", ",", "\"\<Y\>\""}], "]"}]}], "&"}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{"Rule", "[", 
-      RowBox[{"#", ",", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"GatherBy", "[", 
-          RowBox[{"#", ",", 
-           RowBox[{"Sort", "@*", "Characters"}]}], "]"}], "&"}], "@", 
-        RowBox[{"Flatten", "@", 
-         RowBox[{"stabiliserFromGenerators", "@", 
-          RowBox[{"{", "#", "}"}]}]}]}]}], "]"}], "&"}], "/@", 
-    "inequivalentGenerators3q"}], "//", "prettifyPaulis"}], "//", 
-  RowBox[{"Map", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"#", "[", 
-      RowBox[{"[", "1", "]"}], "]"}], "->", 
-     RowBox[{"Column", "@", 
-      RowBox[{"#", "[", 
-       RowBox[{"[", "2", "]"}], "]"}]}]}], "&"}], "]"}]}]}], "Input",
- CellChangeTimes->{{3.9608864780548744`*^9, 3.960886533226568*^9}, {
-  3.961100932159265*^9, 3.9611009507435093`*^9}, {3.961101016583948*^9, 
-  3.961101094047327*^9}, {3.961101159500904*^9, 3.961101195376034*^9}, {
-  3.961101255993624*^9, 3.961101270918354*^9}},
- CellLabel->
-  "In[772]:=",ExpressionUUID->"f8b9b992-1957-524d-b48b-935f17169632"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{
-    TemplateBox[{
-      StyleBox["\"I\"", 
-       GrayLevel[0], Bold, StripOnInput -> False], 
-      StyleBox["\"I\"", 
-       GrayLevel[0], Bold, StripOnInput -> False], 
-      StyleBox["\"X\"", 
-       RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-     "RowDefault"], "\[Rule]", 
-    TagBox[GridBox[{
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]}
-      },
-      DefaultBaseStyle->"Column",
-      GridBoxAlignment->{"Columns" -> {{Left}}},
-      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-     "Column"]}], ",", 
-   RowBox[{
-    TemplateBox[{
-      StyleBox["\"I\"", 
-       GrayLevel[0], Bold, StripOnInput -> False], 
-      StyleBox["\"I\"", 
-       GrayLevel[0], Bold, StripOnInput -> False], 
-      StyleBox["\"Z\"", 
-       RGBColor[0, 
-        Rational[2, 3], 0], Bold, StripOnInput -> False]},
-     "RowDefault"], "\[Rule]", 
-    TagBox[GridBox[{
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]}
-      },
-      DefaultBaseStyle->"Column",
-      GridBoxAlignment->{"Columns" -> {{Left}}},
-      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-     "Column"]}], ",", 
-   RowBox[{
-    TemplateBox[{
-      StyleBox["\"I\"", 
-       GrayLevel[0], Bold, StripOnInput -> False], 
-      StyleBox["\"X\"", 
-       RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-      StyleBox["\"X\"", 
-       RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-     "RowDefault"], "\[Rule]", 
-    TagBox[GridBox[{
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]}
-      },
-      DefaultBaseStyle->"Column",
-      GridBoxAlignment->{"Columns" -> {{Left}}},
-      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-     "Column"]}], ",", 
-   RowBox[{
-    TemplateBox[{
-      StyleBox["\"I\"", 
-       GrayLevel[0], Bold, StripOnInput -> False], 
-      StyleBox["\"X\"", 
-       RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-      StyleBox["\"Z\"", 
-       RGBColor[0, 
-        Rational[2, 3], 0], Bold, StripOnInput -> False]},
-     "RowDefault"], "\[Rule]", 
-    TagBox[GridBox[{
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]}
-      },
-      DefaultBaseStyle->"Column",
-      GridBoxAlignment->{"Columns" -> {{Left}}},
-      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-     "Column"]}], ",", 
-   RowBox[{
-    TemplateBox[{
-      StyleBox["\"I\"", 
-       GrayLevel[0], Bold, StripOnInput -> False], 
-      StyleBox["\"Z\"", 
-       RGBColor[0, 
-        Rational[2, 3], 0], Bold, StripOnInput -> False], 
-      StyleBox["\"Z\"", 
-       RGBColor[0, 
-        Rational[2, 3], 0], Bold, StripOnInput -> False]},
-     "RowDefault"], "\[Rule]", 
-    TagBox[GridBox[{
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]}
-      },
-      DefaultBaseStyle->"Column",
-      GridBoxAlignment->{"Columns" -> {{Left}}},
-      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-     "Column"]}], ",", 
-   RowBox[{
-    TemplateBox[{
-      StyleBox["\"X\"", 
-       RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-      StyleBox["\"X\"", 
-       RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-      StyleBox["\"X\"", 
-       RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-     "RowDefault"], "\[Rule]", 
-    TagBox[GridBox[{
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]}
-      },
-      DefaultBaseStyle->"Column",
-      GridBoxAlignment->{"Columns" -> {{Left}}},
-      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-     "Column"]}], ",", 
-   RowBox[{
-    TemplateBox[{
-      StyleBox["\"X\"", 
-       RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-      StyleBox["\"X\"", 
-       RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-      StyleBox["\"Z\"", 
-       RGBColor[0, 
-        Rational[2, 3], 0], Bold, StripOnInput -> False]},
-     "RowDefault"], "\[Rule]", 
-    TagBox[GridBox[{
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]}
-      },
-      DefaultBaseStyle->"Column",
-      GridBoxAlignment->{"Columns" -> {{Left}}},
-      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-     "Column"]}], ",", 
-   RowBox[{
-    TemplateBox[{
-      StyleBox["\"X\"", 
-       RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-      StyleBox["\"Z\"", 
-       RGBColor[0, 
-        Rational[2, 3], 0], Bold, StripOnInput -> False], 
-      StyleBox["\"Z\"", 
-       RGBColor[0, 
-        Rational[2, 3], 0], Bold, StripOnInput -> False]},
-     "RowDefault"], "\[Rule]", 
-    TagBox[GridBox[{
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-           StyleBox["\"Y\"", 
-            RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-           StyleBox["\"X\"", 
-            RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]}
-      },
-      DefaultBaseStyle->"Column",
-      GridBoxAlignment->{"Columns" -> {{Left}}},
-      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-     "Column"]}], ",", 
-   RowBox[{
-    TemplateBox[{
-      StyleBox["\"Z\"", 
-       RGBColor[0, 
-        Rational[2, 3], 0], Bold, StripOnInput -> False], 
-      StyleBox["\"Z\"", 
-       RGBColor[0, 
-        Rational[2, 3], 0], Bold, StripOnInput -> False], 
-      StyleBox["\"Z\"", 
-       RGBColor[0, 
-        Rational[2, 3], 0], Bold, StripOnInput -> False]},
-     "RowDefault"], "\[Rule]", 
-    TagBox[GridBox[{
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False], 
-           StyleBox["\"I\"", 
-            GrayLevel[0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         TemplateBox[{
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False], 
-           StyleBox["\"Z\"", 
-            RGBColor[0, 
-             Rational[2, 3], 0], Bold, StripOnInput -> False]},
-          "RowDefault"], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"Y\"", 
-             RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-            StyleBox["\"I\"", 
-             GrayLevel[0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]},
-       {
-        RowBox[{"{", 
-         RowBox[{
-          TemplateBox[{
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-           "RowDefault"], ",", 
-          TemplateBox[{
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"X\"", 
-             RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-            StyleBox["\"Z\"", 
-             RGBColor[0, 
-              Rational[2, 3], 0], Bold, StripOnInput -> False]},
-           "RowDefault"]}], "}"}]}
-      },
-      DefaultBaseStyle->"Column",
-      GridBoxAlignment->{"Columns" -> {{Left}}},
-      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-     "Column"]}]}], "}"}]], "Output",
- CellChangeTimes->{{3.96088650656913*^9, 3.960886533978267*^9}, {
-   3.961100938534172*^9, 3.961100951252287*^9}, {3.961101018671683*^9, 
-   3.961101025029412*^9}, {3.961101062691349*^9, 3.961101094859398*^9}, {
-   3.96110116618186*^9, 3.961101196338967*^9}, 3.961101271259449*^9},
- CellLabel->
-  "Out[773]=",ExpressionUUID->"b3d2c56e-1ae6-2042-9b78-5dbc1971257e"]
-}, Open  ]],
+Cell["\<\
+For each coset generator (removing trivially equivalent ones) we show the \
+corresponding number of Z-free cosets, ie the corresponding POVM rank (the \
+identity one doesn\[CloseCurlyQuote]t count as it\[CloseCurlyQuote]s not a \
+valid coset generator)\
+\>", "Text",
+ CellChangeTimes->{{3.997413074597335*^9, 3.9974131067570763`*^9}, {
+  3.997413244009426*^9, 
+  3.997413251839155*^9}},ExpressionUUID->"687f00ac-152e-46d1-9f9a-\
+5f604520103f"],
 
 Cell[CellGroupData[{
 
@@ -5999,6 +2922,14 @@ Cell[BoxData[
   "Out[792]=",ExpressionUUID->"d29c2870-dde2-8947-901a-fd818d066fcc"]
 }, Open  ]],
 
+Cell["\<\
+Cosets corresponding to the coset generator XZZ. The rows containing a Z free \
+element correspond to reconstructed directions\
+\>", "Text",
+ CellChangeTimes->{{3.997413262279148*^9, 
+  3.997413298279153*^9}},ExpressionUUID->"1cbc0149-d6b2-41dc-83c1-\
+86f23422086c"],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[
@@ -6007,22 +2938,25 @@ Cell[BoxData[
    RowBox[{"stabiliserFromGenerators", "@", 
     RowBox[{"{", "\"\<XZZ\>\"", "}"}]}], "//", "Column"}], "//", 
   "prettifyPaulis"}]], "Input",
- CellChangeTimes->{{3.961002471447397*^9, 3.96100247463386*^9}},
- CellLabel->"In[73]:=",ExpressionUUID->"af55b843-6911-364b-97c6-3019201f0130"],
+ CellLabel->
+  "In[108]:=",ExpressionUUID->"1a213228-3682-4767-abcd-9bbd35a9fed3"],
 
 Cell[BoxData[
  TagBox[GridBox[{
     {
      RowBox[{"{", 
       RowBox[{
-       TemplateBox[{
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False], 
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False], 
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]], ",", 
        TemplateBox[{
          StyleBox["\"X\"", 
           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
@@ -6036,14 +2970,17 @@ Cell[BoxData[
     {
      RowBox[{"{", 
       RowBox[{
-       TemplateBox[{
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False], 
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]], ",", 
        TemplateBox[{
          StyleBox["\"I\"", 
           GrayLevel[0], Bold, StripOnInput -> False], 
@@ -6057,41 +2994,53 @@ Cell[BoxData[
     {
      RowBox[{"{", 
       RowBox[{
-       TemplateBox[{
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
-       TemplateBox[{
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-        "RowDefault"]}], "}"}]},
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False], 
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]], ",", 
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]]}], "}"}]},
     {
      RowBox[{"{", 
       RowBox[{
-       TemplateBox[{
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
-       TemplateBox[{
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-        "RowDefault"]}], "}"}]},
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False], 
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]], ",", 
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]]}], "}"}]},
     {
      RowBox[{"{", 
       RowBox[{
@@ -6116,14 +3065,17 @@ Cell[BoxData[
     {
      RowBox[{"{", 
       RowBox[{
-       TemplateBox[{
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]], ",", 
        TemplateBox[{
          StyleBox["\"Z\"", 
           RGBColor[0, 
@@ -6152,163 +3104,184 @@ Cell[BoxData[
            Rational[2, 3], 0], Bold, StripOnInput -> False], 
          StyleBox["\"I\"", 
           GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-        "RowDefault"]}], "}"}]},
-    {
-     RowBox[{"{", 
-      RowBox[{
-       TemplateBox[{
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
-       TemplateBox[{
-         StyleBox["\"Z\"", 
-          RGBColor[0, 
-           Rational[2, 3], 0], Bold, StripOnInput -> False], 
-         StyleBox["\"Z\"", 
-          RGBColor[0, 
-           Rational[2, 3], 0], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-        "RowDefault"]}], "}"}]},
-    {
-     RowBox[{"{", 
-      RowBox[{
-       TemplateBox[{
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"Z\"", 
-          RGBColor[0, 
-           Rational[2, 3], 0], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
-       TemplateBox[{
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"Z\"", 
-          RGBColor[0, 
-           Rational[2, 3], 0], Bold, StripOnInput -> False]},
-        "RowDefault"]}], "}"}]},
-    {
-     RowBox[{"{", 
-      RowBox[{
-       TemplateBox[{
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"Z\"", 
-          RGBColor[0, 
-           Rational[2, 3], 0], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
-       TemplateBox[{
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"Z\"", 
-          RGBColor[0, 
-           Rational[2, 3], 0], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False]},
-        "RowDefault"]}], "}"}]},
-    {
-     RowBox[{"{", 
-      RowBox[{
-       TemplateBox[{
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
-       TemplateBox[{
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-        "RowDefault"]}], "}"}]},
-    {
-     RowBox[{"{", 
-      RowBox[{
-       TemplateBox[{
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
-       TemplateBox[{
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
          StyleBox["\"X\"", 
           RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
         "RowDefault"]}], "}"}]},
     {
      RowBox[{"{", 
       RowBox[{
-       TemplateBox[{
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
-         StyleBox["\"Z\"", 
-          RGBColor[0, 
-           Rational[2, 3], 0], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
-       TemplateBox[{
-         StyleBox["\"Z\"", 
-          RGBColor[0, 
-           Rational[2, 3], 0], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False]},
-        "RowDefault"]}], "}"}]},
-    {
-     RowBox[{"{", 
-      RowBox[{
-       TemplateBox[{
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False]},
-        "RowDefault"], ",", 
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False], 
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]], ",", 
        TemplateBox[{
          StyleBox["\"Z\"", 
           RGBColor[0, 
            Rational[2, 3], 0], Bold, StripOnInput -> False], 
-         StyleBox["\"X\"", 
-          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
          StyleBox["\"Z\"", 
           RGBColor[0, 
-           Rational[2, 3], 0], Bold, StripOnInput -> False]},
-        "RowDefault"]}], "}"}]},
-    {
-     RowBox[{"{", 
-      RowBox[{
-       TemplateBox[{
-         StyleBox["\"Y\"", 
-          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
-         StyleBox["\"I\"", 
-          GrayLevel[0], Bold, StripOnInput -> False], 
+           Rational[2, 3], 0], Bold, StripOnInput -> False], 
          StyleBox["\"Y\"", 
           RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
+        "RowDefault"]}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+       TemplateBox[{
+         StyleBox["\"I\"", 
+          GrayLevel[0], Bold, StripOnInput -> False], 
+         StyleBox["\"Z\"", 
+          RGBColor[0, 
+           Rational[2, 3], 0], Bold, StripOnInput -> False], 
+         StyleBox["\"I\"", 
+          GrayLevel[0], Bold, StripOnInput -> False]},
         "RowDefault"], ",", 
+       TemplateBox[{
+         StyleBox["\"X\"", 
+          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+         StyleBox["\"I\"", 
+          GrayLevel[0], Bold, StripOnInput -> False], 
+         StyleBox["\"Z\"", 
+          RGBColor[0, 
+           Rational[2, 3], 0], Bold, StripOnInput -> False]},
+        "RowDefault"]}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+       TemplateBox[{
+         StyleBox["\"I\"", 
+          GrayLevel[0], Bold, StripOnInput -> False], 
+         StyleBox["\"I\"", 
+          GrayLevel[0], Bold, StripOnInput -> False], 
+         StyleBox["\"Z\"", 
+          RGBColor[0, 
+           Rational[2, 3], 0], Bold, StripOnInput -> False]},
+        "RowDefault"], ",", 
+       TemplateBox[{
+         StyleBox["\"X\"", 
+          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+         StyleBox["\"Z\"", 
+          RGBColor[0, 
+           Rational[2, 3], 0], Bold, StripOnInput -> False], 
+         StyleBox["\"I\"", 
+          GrayLevel[0], Bold, StripOnInput -> False]},
+        "RowDefault"]}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False], 
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]], ",", 
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]]}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False], 
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]], ",", 
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+          StyleBox["\"X\"", 
+           RGBColor[1, 0, 0], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]]}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+       TemplateBox[{
+         StyleBox["\"Y\"", 
+          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+         StyleBox["\"X\"", 
+          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+         StyleBox["\"Z\"", 
+          RGBColor[0, 
+           Rational[2, 3], 0], Bold, StripOnInput -> False]},
+        "RowDefault"], ",", 
+       TemplateBox[{
+         StyleBox["\"Z\"", 
+          RGBColor[0, 
+           Rational[2, 3], 0], Bold, StripOnInput -> False], 
+         StyleBox["\"Y\"", 
+          RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+         StyleBox["\"I\"", 
+          GrayLevel[0], Bold, StripOnInput -> False]},
+        "RowDefault"]}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]], ",", 
+       TemplateBox[{
+         StyleBox["\"Z\"", 
+          RGBColor[0, 
+           Rational[2, 3], 0], Bold, StripOnInput -> False], 
+         StyleBox["\"X\"", 
+          RGBColor[1, 0, 0], Bold, StripOnInput -> False], 
+         StyleBox["\"Z\"", 
+          RGBColor[0, 
+           Rational[2, 3], 0], Bold, StripOnInput -> False]},
+        "RowDefault"]}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+       StyleBox[
+        TemplateBox[{
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False], 
+          StyleBox["\"I\"", 
+           GrayLevel[0], Bold, StripOnInput -> False], 
+          StyleBox["\"Y\"", 
+           RGBColor[0, 0, 1], Bold, StripOnInput -> False]},
+         "RowDefault"],
+        StripOnInput->False,
+        Background->GrayLevel[0.85]], ",", 
        TemplateBox[{
          StyleBox["\"Z\"", 
           RGBColor[0, 
@@ -6345,8 +3318,9 @@ Cell[BoxData[
    GridBoxAlignment->{"Columns" -> {{Left}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Column"]], "Output",
- CellChangeTimes->{3.961002475355533*^9},
- CellLabel->"Out[73]=",ExpressionUUID->"66cfbdfa-c150-ff4f-886a-a3d1add291b0"]
+ CellChangeTimes->{3.9974132707304792`*^9},
+ CellLabel->
+  "Out[108]=",ExpressionUUID->"4b6d2bc1-717c-479a-8d64-befb6fc72f8e"]
 }, Open  ]]
 }, Open  ]],
 
@@ -35016,50 +31990,17 @@ Cell["n=3, t=6", "Section",
   3.9628649536365223`*^9}},ExpressionUUID->"2e08977f-61ae-8645-a977-\
 f3fa64c20419"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
- RowBox[{"NotebookDirectory", "[", "]"}]], "Input",
- CellChangeTimes->{{3.9628649932960167`*^9, 3.9628650025037327`*^9}},
+ RowBox[{"Import", "[", 
+  RowBox[{"FileNameJoin", "@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+     "\"\<n3t6_generatori_casibuoni.txt\>\""}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9628649932960167`*^9, 3.9628650025037327`*^9}, {
+  3.9974127833846083`*^9, 3.9974128027045116`*^9}},
  CellLabel->
-  "In[216]:=",ExpressionUUID->"2838b5ea-6738-244b-a41c-1b3ba579f930"],
-
-Cell[BoxData["\<\"C:\\\\Users\\\\utente\\\\OneDrive - \
-UNIPA\\\\projects\\\\QELM&QRC\\\\2025 Monaco - magic\\\\\"\>"], "Output",
- CellChangeTimes->{3.9628650026167507`*^9},
- CellLabel->
-  "Out[216]=",ExpressionUUID->"66c06b72-414d-6940-bf63-a8b4fe2038bf"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Import", "[", "\"\<n3t6_generatori_casibuoni.txt\>\"", 
-  "]"}]], "Input",
- CellChangeTimes->{{3.962864962219789*^9, 3.9628649803419113`*^9}, {
-  3.9628650124649944`*^9, 3.962865013064722*^9}},
- CellLabel->
-  "In[217]:=",ExpressionUUID->"07074114-ff08-5c40-8c19-01183fc1b7e2"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Import", "nffil", 
-   "\"File \\!\\(\\*RowBox[{\\\"\\\\\\\"n3t6_generatori_casibuoni.txt\\\\\\\"\
-\\\"}]\\) not found during \\!\\(\\*RowBox[{\\\"Import\\\"}]\\).\"", 2, 217, 
-   6, 33188820550817110376, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.9628649644072447`*^9, 3.9628649817561417`*^9}, 
-   3.962865013237911*^9},
- CellLabel->
-  "During evaluation of \
-In[217]:=",ExpressionUUID->"ca0c3365-ee19-e44a-859c-2e957e994d43"],
-
-Cell[BoxData["$Failed"], "Output",
- CellChangeTimes->{{3.962864964420334*^9, 3.9628649817631407`*^9}, 
-   3.962865013245416*^9},
- CellLabel->
-  "Out[217]=",ExpressionUUID->"6493876a-02c8-7e4b-a134-d6deedeee530"]
-}, Open  ]]
+  "In[100]:=",ExpressionUUID->"2838b5ea-6738-244b-a41c-1b3ba579f930"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -35122,327 +32063,317 @@ Cell[92946, 2466, 502, 11, 50, "Input",ExpressionUUID->"9b832c3c-ae18-b54a-8b0f-
 Cell[93451, 2479, 634, 12, 33, "Output",ExpressionUUID->"5031100c-03ef-c349-bc97-f6f272bc2d51"],
 Cell[94088, 2493, 206, 4, 33, "Output",ExpressionUUID->"7d3b5731-7c02-784b-9eba-f5b467e243c9"]
 }, Open  ]],
+Cell[94309, 2500, 453, 9, 35, "Text",ExpressionUUID->"687f00ac-152e-46d1-9f9a-5f604520103f"],
 Cell[CellGroupData[{
-Cell[94331, 2502, 1526, 42, 50, "Input",ExpressionUUID->"f8b9b992-1957-524d-b48b-935f17169632"],
-Cell[95860, 2546, 113345, 3039, 353, "Output",ExpressionUUID->"b3d2c56e-1ae6-2042-9b78-5dbc1971257e"]
+Cell[94787, 2513, 2642, 62, 185, "Input",ExpressionUUID->"3c3988fe-b7ee-8243-9783-16a569952c84"],
+Cell[97432, 2577, 12899, 344, 239, "Output",ExpressionUUID->"d29c2870-dde2-8947-901a-fd818d066fcc"]
 }, Open  ]],
+Cell[110346, 2924, 276, 6, 35, "Text",ExpressionUUID->"1cbc0149-d6b2-41dc-83c1-86f23422086c"],
 Cell[CellGroupData[{
-Cell[209242, 5590, 2642, 62, 185, "Input",ExpressionUUID->"3c3988fe-b7ee-8243-9783-16a569952c84"],
-Cell[211887, 5654, 12899, 344, 239, "Output",ExpressionUUID->"d29c2870-dde2-8947-901a-fd818d066fcc"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[224823, 6003, 321, 7, 29, "Input",ExpressionUUID->"af55b843-6911-364b-97c6-3019201f0130"],
-Cell[225147, 6012, 11566, 336, 285, "Output",ExpressionUUID->"66cfbdfa-c150-ff4f-886a-a3d1add291b0"]
+Cell[110647, 2934, 260, 7, 29, "Input",ExpressionUUID->"1a213228-3682-4767-abcd-9bbd35a9fed3"],
+Cell[110910, 2943, 12860, 379, 285, "Output",ExpressionUUID->"4b6d2bc1-717c-479a-8d64-befb6fc72f8e"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[236762, 6354, 153, 3, 67, "Section",ExpressionUUID->"c247e4ef-6f65-4e41-acdd-b2b7eb47b076"],
+Cell[123819, 3328, 153, 3, 67, "Section",ExpressionUUID->"c247e4ef-6f65-4e41-acdd-b2b7eb47b076"],
 Cell[CellGroupData[{
-Cell[236940, 6361, 1320, 31, 162, "Input",ExpressionUUID->"de12e135-1cdc-cb4f-a854-714e996de0a8"],
-Cell[238263, 6394, 369, 8, 32, "Output",ExpressionUUID->"898c699c-2bd1-4745-b59a-101f07a69e89"]
+Cell[123997, 3335, 1320, 31, 162, "Input",ExpressionUUID->"de12e135-1cdc-cb4f-a854-714e996de0a8"],
+Cell[125320, 3368, 369, 8, 32, "Output",ExpressionUUID->"898c699c-2bd1-4745-b59a-101f07a69e89"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[238669, 6407, 1060, 26, 143, "Input",ExpressionUUID->"e598bf37-de58-d547-afb2-124113347181"],
-Cell[239732, 6435, 220, 5, 32, "Output",ExpressionUUID->"168fe6be-2abb-de4b-bfb8-49daaa955e1a"]
+Cell[125726, 3381, 1060, 26, 143, "Input",ExpressionUUID->"e598bf37-de58-d547-afb2-124113347181"],
+Cell[126789, 3409, 220, 5, 32, "Output",ExpressionUUID->"168fe6be-2abb-de4b-bfb8-49daaa955e1a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[239989, 6445, 1603, 43, 124, "Input",ExpressionUUID->"f6e7c9f9-0638-e340-9ce6-1afa2d22b732"],
-Cell[241595, 6490, 112323, 2879, 343, "Output",ExpressionUUID->"2e138b81-b0bc-0d4c-b40b-95259b153285"]
+Cell[127046, 3419, 1603, 43, 124, "Input",ExpressionUUID->"f6e7c9f9-0638-e340-9ce6-1afa2d22b732"],
+Cell[128652, 3464, 112323, 2879, 343, "Output",ExpressionUUID->"2e138b81-b0bc-0d4c-b40b-95259b153285"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[353955, 9374, 637, 20, 31, "Input",ExpressionUUID->"eba31452-ab5d-0b40-a246-8f0d09688c85"],
-Cell[354595, 9396, 213, 5, 32, "Output",ExpressionUUID->"58d67414-5e5b-3048-8aad-6e15eec526a4"]
+Cell[241012, 6348, 637, 20, 31, "Input",ExpressionUUID->"eba31452-ab5d-0b40-a246-8f0d09688c85"],
+Cell[241652, 6370, 213, 5, 32, "Output",ExpressionUUID->"58d67414-5e5b-3048-8aad-6e15eec526a4"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[354857, 9407, 152, 3, 53, "Section",ExpressionUUID->"27ddbb35-59f6-9343-bb03-a862579a2973"],
+Cell[241914, 6381, 152, 3, 53, "Section",ExpressionUUID->"27ddbb35-59f6-9343-bb03-a862579a2973"],
 Cell[CellGroupData[{
-Cell[355034, 9414, 1766, 48, 124, "Input",ExpressionUUID->"fe431a62-4b84-a447-8ba3-850c32cd40fc"],
-Cell[356803, 9464, 133104, 3342, 200, "Output",ExpressionUUID->"b731c6fd-15ed-984d-9c75-6314933db992"]
+Cell[242091, 6388, 1766, 48, 124, "Input",ExpressionUUID->"fe431a62-4b84-a447-8ba3-850c32cd40fc"],
+Cell[243860, 6438, 133104, 3342, 200, "Output",ExpressionUUID->"b731c6fd-15ed-984d-9c75-6314933db992"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[489944, 12811, 513, 15, 31, "Input",ExpressionUUID->"e9430103-b829-1a46-8974-d4d0ced27573"],
-Cell[490460, 12828, 262, 6, 32, "Output",ExpressionUUID->"2886a05f-64ca-9e4e-aa5b-ff4df4ba6d0a"]
+Cell[377001, 9785, 513, 15, 31, "Input",ExpressionUUID->"e9430103-b829-1a46-8974-d4d0ced27573"],
+Cell[377517, 9802, 262, 6, 32, "Output",ExpressionUUID->"2886a05f-64ca-9e4e-aa5b-ff4df4ba6d0a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[490759, 12839, 1110, 25, 28, "Input",ExpressionUUID->"9f10b55c-82a2-b042-9133-8ad14d95d251"],
-Cell[491872, 12866, 16155, 460, 282, "Output",ExpressionUUID->"0fa200e5-ad9f-b944-8da2-c9359f09763f"]
+Cell[377816, 9813, 1110, 25, 28, "Input",ExpressionUUID->"9f10b55c-82a2-b042-9133-8ad14d95d251"],
+Cell[378929, 9840, 16155, 460, 282, "Output",ExpressionUUID->"0fa200e5-ad9f-b944-8da2-c9359f09763f"]
 }, Open  ]],
-Cell[508042, 13329, 546, 15, 28, "Input",ExpressionUUID->"83ce6ee6-755d-0249-88a5-2c09fda1cf70"],
-Cell[508591, 13346, 470, 11, 28, "Input",ExpressionUUID->"6072261d-ab18-024d-814e-b2d2e676c278"],
-Cell[509064, 13359, 509, 13, 28, "Input",ExpressionUUID->"426a9aaf-1322-e340-a086-d11754f2afd2"],
+Cell[395099, 10303, 546, 15, 28, "Input",ExpressionUUID->"83ce6ee6-755d-0249-88a5-2c09fda1cf70"],
+Cell[395648, 10320, 470, 11, 28, "Input",ExpressionUUID->"6072261d-ab18-024d-814e-b2d2e676c278"],
+Cell[396121, 10333, 509, 13, 28, "Input",ExpressionUUID->"426a9aaf-1322-e340-a086-d11754f2afd2"],
 Cell[CellGroupData[{
-Cell[509598, 13376, 616, 17, 28, "Input",ExpressionUUID->"df1ec0b4-827a-e94c-b6f6-310d0c7890eb"],
-Cell[510217, 13395, 243, 5, 32, "Output",ExpressionUUID->"7377c81a-0e89-c44f-ac7e-a82dbedb4bcf"]
+Cell[396655, 10350, 616, 17, 28, "Input",ExpressionUUID->"df1ec0b4-827a-e94c-b6f6-310d0c7890eb"],
+Cell[397274, 10369, 243, 5, 32, "Output",ExpressionUUID->"7377c81a-0e89-c44f-ac7e-a82dbedb4bcf"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[510521, 13407, 150, 3, 69, "Chapter",ExpressionUUID->"f1b6ca4d-2ce5-d84d-81c7-5d57350a7c66"],
+Cell[397578, 10381, 150, 3, 69, "Chapter",ExpressionUUID->"f1b6ca4d-2ce5-d84d-81c7-5d57350a7c66"],
 Cell[CellGroupData[{
-Cell[510696, 13414, 153, 3, 67, "Section",ExpressionUUID->"7082ea92-1b40-1643-9b3b-3dd22239d052"],
-Cell[510852, 13419, 1891, 50, 110, "Input",ExpressionUUID->"d750b6fe-3928-2e48-bda7-9e3d893f4fdf"],
+Cell[397753, 10388, 153, 3, 67, "Section",ExpressionUUID->"7082ea92-1b40-1643-9b3b-3dd22239d052"],
+Cell[397909, 10393, 1891, 50, 110, "Input",ExpressionUUID->"d750b6fe-3928-2e48-bda7-9e3d893f4fdf"],
 Cell[CellGroupData[{
-Cell[512768, 13473, 339, 9, 29, "Input",ExpressionUUID->"d5b71b31-990e-7e48-a69b-56e5dc6602aa"],
-Cell[513110, 13484, 25657, 728, 284, "Output",ExpressionUUID->"3ec7dd7f-a74f-e64d-845e-6f3302def09e"]
+Cell[399825, 10447, 339, 9, 29, "Input",ExpressionUUID->"d5b71b31-990e-7e48-a69b-56e5dc6602aa"],
+Cell[400167, 10458, 25657, 728, 284, "Output",ExpressionUUID->"3ec7dd7f-a74f-e64d-845e-6f3302def09e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[538804, 14217, 1295, 36, 92, "Input",ExpressionUUID->"bb502718-83ad-4090-b84a-b1d8ea4306c6"],
-Cell[540102, 14255, 11604, 315, 239, "Output",ExpressionUUID->"65dd7447-0266-44e7-adb2-39e19caee0be"]
+Cell[425861, 11191, 1295, 36, 92, "Input",ExpressionUUID->"bb502718-83ad-4090-b84a-b1d8ea4306c6"],
+Cell[427159, 11229, 11604, 315, 239, "Output",ExpressionUUID->"65dd7447-0266-44e7-adb2-39e19caee0be"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[551743, 14575, 1327, 37, 92, "Input",ExpressionUUID->"9c604a59-02d3-1842-911e-bda778466585"],
-Cell[553073, 14614, 31153, 847, 625, "Output",ExpressionUUID->"fd5d6da8-aaab-bd43-8d23-224781078a46"]
+Cell[438800, 11549, 1327, 37, 92, "Input",ExpressionUUID->"9c604a59-02d3-1842-911e-bda778466585"],
+Cell[440130, 11588, 31153, 847, 625, "Output",ExpressionUUID->"fd5d6da8-aaab-bd43-8d23-224781078a46"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[584263, 15466, 423, 11, 29, "Input",ExpressionUUID->"f092b8c9-97ba-4de9-9b19-45dc17ec05b7"],
-Cell[584689, 15479, 157, 3, 33, "Output",ExpressionUUID->"a5ff0f20-389b-4aba-a9ec-ddf7bf7bebc1"]
+Cell[471320, 12440, 423, 11, 29, "Input",ExpressionUUID->"f092b8c9-97ba-4de9-9b19-45dc17ec05b7"],
+Cell[471746, 12453, 157, 3, 33, "Output",ExpressionUUID->"a5ff0f20-389b-4aba-a9ec-ddf7bf7bebc1"]
 }, Open  ]],
-Cell[584861, 15485, 513, 13, 29, "Input",ExpressionUUID->"189b92f9-7eb0-a64d-adea-95a4ec3336c3"],
+Cell[471918, 12459, 513, 13, 29, "Input",ExpressionUUID->"189b92f9-7eb0-a64d-adea-95a4ec3336c3"],
 Cell[CellGroupData[{
-Cell[585399, 15502, 177, 3, 54, "Subsection",ExpressionUUID->"2c8ef8ab-ef65-4644-969a-a7e0fb129aea"],
+Cell[472456, 12476, 177, 3, 54, "Subsection",ExpressionUUID->"2c8ef8ab-ef65-4644-969a-a7e0fb129aea"],
 Cell[CellGroupData[{
-Cell[585601, 15509, 130, 2, 29, "Input",ExpressionUUID->"68262895-3609-114e-8343-a960e7b6ad19"],
-Cell[585734, 15513, 3418, 85, 54, "Output",ExpressionUUID->"af2cef97-5ebf-e44a-987b-36680d27b08e"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[589189, 15603, 411, 9, 29, "Input",ExpressionUUID->"b2422e0f-5ffd-dd46-a111-4cf7cda89bec"],
-Cell[589603, 15614, 9398, 128, 194, "Output",ExpressionUUID->"bfbfab7a-7ada-4403-a0c5-ca4ff102d444"]
+Cell[472658, 12483, 130, 2, 29, "Input",ExpressionUUID->"68262895-3609-114e-8343-a960e7b6ad19"],
+Cell[472791, 12487, 3418, 85, 54, "Output",ExpressionUUID->"af2cef97-5ebf-e44a-987b-36680d27b08e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[599038, 15747, 429, 10, 29, "Input",ExpressionUUID->"3046dbeb-4ac9-4bbd-a65b-d9c3b5072bfb"],
-Cell[599470, 15759, 3116, 77, 54, "Output",ExpressionUUID->"eff8dcb3-e75a-4afd-9bf6-03276450c53c"]
+Cell[476246, 12577, 411, 9, 29, "Input",ExpressionUUID->"b2422e0f-5ffd-dd46-a111-4cf7cda89bec"],
+Cell[476660, 12588, 9398, 128, 194, "Output",ExpressionUUID->"bfbfab7a-7ada-4403-a0c5-ca4ff102d444"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[602623, 15841, 1506, 36, 70, "Input",ExpressionUUID->"0ecb7af7-a7b7-4f4c-98e3-692df1ee85f6"],
-Cell[604132, 15879, 751, 13, 33, "Output",ExpressionUUID->"f3b3ad0b-3f91-ac44-8972-c67ce9627568"]
+Cell[486095, 12721, 429, 10, 29, "Input",ExpressionUUID->"3046dbeb-4ac9-4bbd-a65b-d9c3b5072bfb"],
+Cell[486527, 12733, 3116, 77, 54, "Output",ExpressionUUID->"eff8dcb3-e75a-4afd-9bf6-03276450c53c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[604920, 15897, 1158, 32, 29, "Input",ExpressionUUID->"55ff8d20-bf72-b840-a50b-76ae8d2a9c80"],
-Cell[606081, 15931, 68820, 1832, 64, "Output",ExpressionUUID->"b7cd8a9b-01ae-8140-bdea-0bcb9d166f05"]
+Cell[489680, 12815, 1506, 36, 70, "Input",ExpressionUUID->"0ecb7af7-a7b7-4f4c-98e3-692df1ee85f6"],
+Cell[491189, 12853, 751, 13, 33, "Output",ExpressionUUID->"f3b3ad0b-3f91-ac44-8972-c67ce9627568"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[674938, 17768, 1255, 28, 29, "Input",ExpressionUUID->"a5c00b9b-6e4e-2b45-a3df-72af79efecd6"],
-Cell[676196, 17798, 62956, 1785, 64, "Output",ExpressionUUID->"90e2fc51-2f06-1a41-b9c6-de374135120f"]
+Cell[491977, 12871, 1158, 32, 29, "Input",ExpressionUUID->"55ff8d20-bf72-b840-a50b-76ae8d2a9c80"],
+Cell[493138, 12905, 68820, 1832, 64, "Output",ExpressionUUID->"b7cd8a9b-01ae-8140-bdea-0bcb9d166f05"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[739189, 19588, 770, 17, 29, "Input",ExpressionUUID->"d2c05992-cbc2-284c-8a5a-015dc35bb0eb"],
-Cell[739962, 19607, 720, 19, 23, "Echo",ExpressionUUID->"945942d3-ce59-d446-895e-ec17f86f624f"],
-Cell[740685, 19628, 8107, 228, 47, "Output",ExpressionUUID->"9b077e87-746f-7b4c-83ff-15105d9ab580"]
+Cell[561995, 14742, 1255, 28, 29, "Input",ExpressionUUID->"a5c00b9b-6e4e-2b45-a3df-72af79efecd6"],
+Cell[563253, 14772, 62956, 1785, 64, "Output",ExpressionUUID->"90e2fc51-2f06-1a41-b9c6-de374135120f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[748829, 19861, 1155, 31, 29, "Input",ExpressionUUID->"8f070efe-d043-b046-a280-47e1347fe45f"],
-Cell[749987, 19894, 60224, 1719, 64, "Output",ExpressionUUID->"19acfda2-6be7-0249-97dd-0efed770aa03"]
-}, Open  ]],
-Cell[810226, 21616, 789, 21, 29, "Input",ExpressionUUID->"de87c83e-083e-4b4e-9528-1836352617a2"],
-Cell[CellGroupData[{
-Cell[811040, 21641, 275, 5, 29, "Input",ExpressionUUID->"7dd8a55f-fac1-6d44-89d9-9ad4892bb0c4"],
-Cell[811318, 21648, 643, 12, 33, "Output",ExpressionUUID->"d961b555-cdd4-c14c-a7f8-c27f1ebaf9b4"]
+Cell[626246, 16562, 770, 17, 29, "Input",ExpressionUUID->"d2c05992-cbc2-284c-8a5a-015dc35bb0eb"],
+Cell[627019, 16581, 720, 19, 23, "Echo",ExpressionUUID->"945942d3-ce59-d446-895e-ec17f86f624f"],
+Cell[627742, 16602, 8107, 228, 47, "Output",ExpressionUUID->"9b077e87-746f-7b4c-83ff-15105d9ab580"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[811998, 21665, 461, 11, 29, "Input",ExpressionUUID->"77eee2f8-5890-034e-9356-7c4f4a8dcb77"],
-Cell[812462, 21678, 27513, 789, 284, "Output",ExpressionUUID->"4766eca7-180b-594e-b612-0a68d5e9555c"]
+Cell[635886, 16835, 1155, 31, 29, "Input",ExpressionUUID->"8f070efe-d043-b046-a280-47e1347fe45f"],
+Cell[637044, 16868, 60224, 1719, 64, "Output",ExpressionUUID->"19acfda2-6be7-0249-97dd-0efed770aa03"]
+}, Open  ]],
+Cell[697283, 18590, 789, 21, 29, "Input",ExpressionUUID->"de87c83e-083e-4b4e-9528-1836352617a2"],
+Cell[CellGroupData[{
+Cell[698097, 18615, 275, 5, 29, "Input",ExpressionUUID->"7dd8a55f-fac1-6d44-89d9-9ad4892bb0c4"],
+Cell[698375, 18622, 643, 12, 33, "Output",ExpressionUUID->"d961b555-cdd4-c14c-a7f8-c27f1ebaf9b4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[840012, 22472, 439, 10, 29, "Input",ExpressionUUID->"201c7817-1cd5-f345-b6ed-c95e4ae4264f"],
-Cell[840454, 22484, 27905, 804, 284, "Output",ExpressionUUID->"4f80a277-2ab4-4442-bed6-8be92cea36ad"]
+Cell[699055, 18639, 461, 11, 29, "Input",ExpressionUUID->"77eee2f8-5890-034e-9356-7c4f4a8dcb77"],
+Cell[699519, 18652, 27513, 789, 284, "Output",ExpressionUUID->"4766eca7-180b-594e-b612-0a68d5e9555c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[868396, 23293, 365, 9, 29, "Input",ExpressionUUID->"760382c3-abe1-4f4c-9d79-c28862ed2824"],
-Cell[868764, 23304, 27505, 791, 284, "Output",ExpressionUUID->"fcfd2f8e-c32f-0942-9a54-41218c2b1484"]
+Cell[727069, 19446, 439, 10, 29, "Input",ExpressionUUID->"201c7817-1cd5-f345-b6ed-c95e4ae4264f"],
+Cell[727511, 19458, 27905, 804, 284, "Output",ExpressionUUID->"4f80a277-2ab4-4442-bed6-8be92cea36ad"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[896306, 24100, 412, 10, 29, "Input",ExpressionUUID->"06d40bb2-2ee5-7c48-b0e4-4dfaa317609e"],
-Cell[896721, 24112, 37839, 1043, 284, "Output",ExpressionUUID->"3d2e10c4-d962-6649-ae87-c65e2995e5df"]
+Cell[755453, 20267, 365, 9, 29, "Input",ExpressionUUID->"760382c3-abe1-4f4c-9d79-c28862ed2824"],
+Cell[755821, 20278, 27505, 791, 284, "Output",ExpressionUUID->"fcfd2f8e-c32f-0942-9a54-41218c2b1484"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[783363, 21074, 412, 10, 29, "Input",ExpressionUUID->"06d40bb2-2ee5-7c48-b0e4-4dfaa317609e"],
+Cell[783778, 21086, 37839, 1043, 284, "Output",ExpressionUUID->"3d2e10c4-d962-6649-ae87-c65e2995e5df"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[934621, 25162, 246, 4, 67, "Section",ExpressionUUID->"f9736c01-ec35-3344-ad5a-162778167822"],
-Cell[934870, 25168, 1619, 40, 110, "Input",ExpressionUUID->"98441005-3721-b041-94c4-270c31eaf5c0"],
+Cell[821678, 22136, 246, 4, 67, "Section",ExpressionUUID->"f9736c01-ec35-3344-ad5a-162778167822"],
+Cell[821927, 22142, 1619, 40, 110, "Input",ExpressionUUID->"98441005-3721-b041-94c4-270c31eaf5c0"],
 Cell[CellGroupData[{
-Cell[936514, 25212, 1379, 39, 96, "Input",ExpressionUUID->"1e8945e7-a934-c14f-b383-c472b08a4c7f"],
-Cell[937896, 25253, 472, 7, 33, "Output",ExpressionUUID->"a43ab3e4-bf7d-3a4c-92a5-7212e26bf77a"],
+Cell[823571, 22186, 1379, 39, 96, "Input",ExpressionUUID->"1e8945e7-a934-c14f-b383-c472b08a4c7f"],
+Cell[824953, 22227, 472, 7, 33, "Output",ExpressionUUID->"a43ab3e4-bf7d-3a4c-92a5-7212e26bf77a"],
 Cell[CellGroupData[{
-Cell[938393, 25264, 233, 6, 23, "Echo",ExpressionUUID->"3fd76b62-6e5d-0044-9af7-f6f7499b9bbe"],
-Cell[938629, 25272, 255, 7, 23, "Echo",ExpressionUUID->"f723093b-383c-824f-9c09-8e8e802dc1f7"],
-Cell[938887, 25281, 239, 6, 23, "Echo",ExpressionUUID->"3fc09125-7ac7-b94e-b1f5-700025b4079a"]
+Cell[825450, 22238, 233, 6, 23, "Echo",ExpressionUUID->"3fd76b62-6e5d-0044-9af7-f6f7499b9bbe"],
+Cell[825686, 22246, 255, 7, 23, "Echo",ExpressionUUID->"f723093b-383c-824f-9c09-8e8e802dc1f7"],
+Cell[825944, 22255, 239, 6, 23, "Echo",ExpressionUUID->"3fc09125-7ac7-b94e-b1f5-700025b4079a"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[939175, 25293, 2309, 54, 150, "Input",ExpressionUUID->"945e519e-91f8-4bde-85a6-97ad6609cdbc"],
-Cell[941487, 25349, 914, 16, 33, "Output",ExpressionUUID->"137d2a5e-b63e-5f41-8fb9-19f87acddb09"],
+Cell[826232, 22267, 2309, 54, 150, "Input",ExpressionUUID->"945e519e-91f8-4bde-85a6-97ad6609cdbc"],
+Cell[828544, 22323, 914, 16, 33, "Output",ExpressionUUID->"137d2a5e-b63e-5f41-8fb9-19f87acddb09"],
 Cell[CellGroupData[{
-Cell[942426, 25369, 2825, 80, 36, "Echo",ExpressionUUID->"e2fa35bb-8e6b-d344-953d-df03567981c2"],
-Cell[945254, 25451, 4200, 118, 36, "Echo",ExpressionUUID->"577988b7-1398-194f-a5bd-ee6334310727"],
-Cell[949457, 25571, 2823, 80, 36, "Echo",ExpressionUUID->"dff81b4e-7719-0e46-a3c9-1b71ff78cbf6"],
-Cell[952283, 25653, 13284, 365, 36, "Echo",ExpressionUUID->"62049458-7b39-ca40-ac6c-39a660ef064b"],
-Cell[965570, 26020, 2872, 81, 36, "Echo",ExpressionUUID->"27344cf2-775c-be42-9322-a3d5d4e73a46"],
-Cell[968445, 26103, 6710, 186, 36, "Echo",ExpressionUUID->"164576be-0c65-3d4f-9f73-e936934b9f72"],
-Cell[975158, 26291, 13095, 358, 36, "Echo",ExpressionUUID->"52f3f92b-ba71-0b4e-8055-0fe32baeec9a"],
-Cell[988256, 26651, 13345, 366, 36, "Echo",ExpressionUUID->"cf818e1d-75ce-b24b-b3d3-526f1bfffbc1"],
-Cell[1001604, 27019, 13275, 361, 36, "Echo",ExpressionUUID->"952292ea-4e55-b341-b8f9-d50df0af94b0"],
-Cell[1014882, 27382, 14091, 386, 36, "Echo",ExpressionUUID->"9cd4b491-00bd-bc46-b375-e0cf64d6da76"],
-Cell[1028976, 27770, 13906, 380, 36, "Echo",ExpressionUUID->"d83cf96b-a5bb-744f-ab1e-18c4f80457bc"],
-Cell[1042885, 28152, 13974, 381, 36, "Echo",ExpressionUUID->"5c7f6af2-1b7c-6448-8f2f-718d26ccd3df"],
-Cell[1056862, 28535, 13971, 382, 36, "Echo",ExpressionUUID->"f59d1c9c-a0e1-a545-8df2-b499777740d1"],
-Cell[1070836, 28919, 5577, 156, 36, "Echo",ExpressionUUID->"53ef0a9b-5d90-d14c-9589-64f877f1c30b"],
-Cell[1076416, 29077, 13824, 379, 36, "Echo",ExpressionUUID->"6dcea1c6-ca8e-764f-89e9-bcc96d2020f7"],
-Cell[1090243, 29458, 13887, 382, 36, "Echo",ExpressionUUID->"dd5b9f29-c394-7b46-a6de-6ca1fe2989ac"],
-Cell[1104133, 29842, 14033, 386, 36, "Echo",ExpressionUUID->"6781b9d1-88fc-d049-a162-b51f7a576b54"],
-Cell[1118169, 30230, 8455, 234, 36, "Echo",ExpressionUUID->"b1f9a194-f15d-8b4c-933b-c2b027c345f5"],
-Cell[1126627, 30466, 5668, 157, 36, "Echo",ExpressionUUID->"2c124a26-94ef-4246-ba62-1b3cbc685ad6"],
-Cell[1132298, 30625, 2969, 84, 36, "Echo",ExpressionUUID->"10fd6d3f-2b71-dd47-87cd-a80f55f88d8c"],
-Cell[1135270, 30711, 4419, 124, 36, "Echo",ExpressionUUID->"35758627-1fc4-6f42-b4e0-72e8a95b168b"]
+Cell[829483, 22343, 2825, 80, 36, "Echo",ExpressionUUID->"e2fa35bb-8e6b-d344-953d-df03567981c2"],
+Cell[832311, 22425, 4200, 118, 36, "Echo",ExpressionUUID->"577988b7-1398-194f-a5bd-ee6334310727"],
+Cell[836514, 22545, 2823, 80, 36, "Echo",ExpressionUUID->"dff81b4e-7719-0e46-a3c9-1b71ff78cbf6"],
+Cell[839340, 22627, 13284, 365, 36, "Echo",ExpressionUUID->"62049458-7b39-ca40-ac6c-39a660ef064b"],
+Cell[852627, 22994, 2872, 81, 36, "Echo",ExpressionUUID->"27344cf2-775c-be42-9322-a3d5d4e73a46"],
+Cell[855502, 23077, 6710, 186, 36, "Echo",ExpressionUUID->"164576be-0c65-3d4f-9f73-e936934b9f72"],
+Cell[862215, 23265, 13095, 358, 36, "Echo",ExpressionUUID->"52f3f92b-ba71-0b4e-8055-0fe32baeec9a"],
+Cell[875313, 23625, 13345, 366, 36, "Echo",ExpressionUUID->"cf818e1d-75ce-b24b-b3d3-526f1bfffbc1"],
+Cell[888661, 23993, 13275, 361, 36, "Echo",ExpressionUUID->"952292ea-4e55-b341-b8f9-d50df0af94b0"],
+Cell[901939, 24356, 14091, 386, 36, "Echo",ExpressionUUID->"9cd4b491-00bd-bc46-b375-e0cf64d6da76"],
+Cell[916033, 24744, 13906, 380, 36, "Echo",ExpressionUUID->"d83cf96b-a5bb-744f-ab1e-18c4f80457bc"],
+Cell[929942, 25126, 13974, 381, 36, "Echo",ExpressionUUID->"5c7f6af2-1b7c-6448-8f2f-718d26ccd3df"],
+Cell[943919, 25509, 13971, 382, 36, "Echo",ExpressionUUID->"f59d1c9c-a0e1-a545-8df2-b499777740d1"],
+Cell[957893, 25893, 5577, 156, 36, "Echo",ExpressionUUID->"53ef0a9b-5d90-d14c-9589-64f877f1c30b"],
+Cell[963473, 26051, 13824, 379, 36, "Echo",ExpressionUUID->"6dcea1c6-ca8e-764f-89e9-bcc96d2020f7"],
+Cell[977300, 26432, 13887, 382, 36, "Echo",ExpressionUUID->"dd5b9f29-c394-7b46-a6de-6ca1fe2989ac"],
+Cell[991190, 26816, 14033, 386, 36, "Echo",ExpressionUUID->"6781b9d1-88fc-d049-a162-b51f7a576b54"],
+Cell[1005226, 27204, 8455, 234, 36, "Echo",ExpressionUUID->"b1f9a194-f15d-8b4c-933b-c2b027c345f5"],
+Cell[1013684, 27440, 5668, 157, 36, "Echo",ExpressionUUID->"2c124a26-94ef-4246-ba62-1b3cbc685ad6"],
+Cell[1019355, 27599, 2969, 84, 36, "Echo",ExpressionUUID->"10fd6d3f-2b71-dd47-87cd-a80f55f88d8c"],
+Cell[1022327, 27685, 4419, 124, 36, "Echo",ExpressionUUID->"35758627-1fc4-6f42-b4e0-72e8a95b168b"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1139738, 30841, 923, 25, 110, "Input",ExpressionUUID->"078767e0-ac85-c142-95d7-f353fabdb6ae"],
+Cell[1026795, 27815, 923, 25, 110, "Input",ExpressionUUID->"078767e0-ac85-c142-95d7-f353fabdb6ae"],
 Cell[CellGroupData[{
-Cell[1140686, 30870, 198, 6, 23, "Echo",ExpressionUUID->"10f5e944-5def-8845-8ccb-2ce7a567777c"],
-Cell[1140887, 30878, 191, 6, 23, "Echo",ExpressionUUID->"e9ef415a-4901-a348-9d63-969342aef4fe"]
+Cell[1027743, 27844, 198, 6, 23, "Echo",ExpressionUUID->"10f5e944-5def-8845-8ccb-2ce7a567777c"],
+Cell[1027944, 27852, 191, 6, 23, "Echo",ExpressionUUID->"e9ef415a-4901-a348-9d63-969342aef4fe"]
 }, Open  ]],
-Cell[1141093, 30887, 11329, 343, 284, "Output",ExpressionUUID->"06c4c932-fe3d-d24b-af2f-7914ccbe3669"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1152459, 31235, 1292, 32, 110, "Input",ExpressionUUID->"e71eef4f-e937-4b93-812a-37b814474821"],
-Cell[CellGroupData[{
-Cell[1153776, 31271, 199, 6, 23, "Echo",ExpressionUUID->"09dd466a-14ab-3544-90b3-b51f55b95053"],
-Cell[1153978, 31279, 190, 6, 23, "Echo",ExpressionUUID->"67efde84-ded9-ac4a-b27c-bfba8e2d64d2"]
-}, Open  ]],
-Cell[1154183, 31288, 6186, 180, 81, "Output",ExpressionUUID->"0de33b9a-6a7d-c14c-9eef-796d077b4da4"]
+Cell[1028150, 27861, 11329, 343, 284, "Output",ExpressionUUID->"06c4c932-fe3d-d24b-af2f-7914ccbe3669"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1160406, 31473, 510, 13, 29, "Input",ExpressionUUID->"93290d01-0df0-4df4-86e0-2253eca39491"],
-Cell[1160919, 31488, 204, 4, 33, "Output",ExpressionUUID->"a5bdd9c9-6fd8-464d-b491-187280060a45"]
+Cell[1039516, 28209, 1292, 32, 110, "Input",ExpressionUUID->"e71eef4f-e937-4b93-812a-37b814474821"],
+Cell[CellGroupData[{
+Cell[1040833, 28245, 199, 6, 23, "Echo",ExpressionUUID->"09dd466a-14ab-3544-90b3-b51f55b95053"],
+Cell[1041035, 28253, 190, 6, 23, "Echo",ExpressionUUID->"67efde84-ded9-ac4a-b27c-bfba8e2d64d2"]
+}, Open  ]],
+Cell[1041240, 28262, 6186, 180, 81, "Output",ExpressionUUID->"0de33b9a-6a7d-c14c-9eef-796d077b4da4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1161160, 31497, 401, 11, 29, "Input",ExpressionUUID->"4cad5c2a-6541-d642-9d47-c0dbca4577c2"],
-Cell[1161564, 31510, 625, 12, 33, "Output",ExpressionUUID->"f27f4860-6073-ae40-b33e-6c8dcae34299"]
+Cell[1047463, 28447, 510, 13, 29, "Input",ExpressionUUID->"93290d01-0df0-4df4-86e0-2253eca39491"],
+Cell[1047976, 28462, 204, 4, 33, "Output",ExpressionUUID->"a5bdd9c9-6fd8-464d-b491-187280060a45"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1162226, 31527, 715, 19, 50, "Input",ExpressionUUID->"3f3d63d6-0080-be44-a8c6-fb1ac2db9211"],
-Cell[1162944, 31548, 350, 7, 33, "Output",ExpressionUUID->"a9006fc5-fec6-a94e-b634-a5da3020f084"],
-Cell[1163297, 31557, 326, 7, 33, "Output",ExpressionUUID->"a529a83b-d5cf-0d41-b0ab-5c1322ef6f09"]
+Cell[1048217, 28471, 401, 11, 29, "Input",ExpressionUUID->"4cad5c2a-6541-d642-9d47-c0dbca4577c2"],
+Cell[1048621, 28484, 625, 12, 33, "Output",ExpressionUUID->"f27f4860-6073-ae40-b33e-6c8dcae34299"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1163660, 31569, 337, 8, 29, "Input",ExpressionUUID->"2db77e66-ace4-8943-b546-0034dfd3c8a0"],
-Cell[1164000, 31579, 179, 3, 33, "Output",ExpressionUUID->"750121ce-cbff-7644-ba2b-ff58d3671ee2"]
+Cell[1049283, 28501, 715, 19, 50, "Input",ExpressionUUID->"3f3d63d6-0080-be44-a8c6-fb1ac2db9211"],
+Cell[1050001, 28522, 350, 7, 33, "Output",ExpressionUUID->"a9006fc5-fec6-a94e-b634-a5da3020f084"],
+Cell[1050354, 28531, 326, 7, 33, "Output",ExpressionUUID->"a529a83b-d5cf-0d41-b0ab-5c1322ef6f09"]
 }, Open  ]],
-Cell[1164194, 31585, 278, 6, 35, "Text",ExpressionUUID->"f29e6ac0-3ad5-de4a-a050-0a76702793ad"],
 Cell[CellGroupData[{
-Cell[1164497, 31595, 943, 24, 110, "Input",ExpressionUUID->"812ab8cc-ef4d-6e43-b299-86831e61ce0e"],
-Cell[1165443, 31621, 391, 6, 33, "Output",ExpressionUUID->"3792b66a-8df9-834c-bb2b-f47aae6ca5ee"],
-Cell[1165837, 31629, 390, 6, 33, "Output",ExpressionUUID->"c1e20f87-7036-3149-946f-e2fc33b6c43f"]
+Cell[1050717, 28543, 337, 8, 29, "Input",ExpressionUUID->"2db77e66-ace4-8943-b546-0034dfd3c8a0"],
+Cell[1051057, 28553, 179, 3, 33, "Output",ExpressionUUID->"750121ce-cbff-7644-ba2b-ff58d3671ee2"]
 }, Open  ]],
-Cell[1166242, 31638, 2558, 69, 166, "Input",ExpressionUUID->"7d0ffca4-6a44-1d44-940d-3159e8bd5a17",
+Cell[1051251, 28559, 278, 6, 35, "Text",ExpressionUUID->"f29e6ac0-3ad5-de4a-a050-0a76702793ad"],
+Cell[CellGroupData[{
+Cell[1051554, 28569, 943, 24, 110, "Input",ExpressionUUID->"812ab8cc-ef4d-6e43-b299-86831e61ce0e"],
+Cell[1052500, 28595, 391, 6, 33, "Output",ExpressionUUID->"3792b66a-8df9-834c-bb2b-f47aae6ca5ee"],
+Cell[1052894, 28603, 390, 6, 33, "Output",ExpressionUUID->"c1e20f87-7036-3149-946f-e2fc33b6c43f"]
+}, Open  ]],
+Cell[1053299, 28612, 2558, 69, 166, "Input",ExpressionUUID->"7d0ffca4-6a44-1d44-940d-3159e8bd5a17",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[1168825, 31711, 587, 15, 50, "Input",ExpressionUUID->"6ff3e823-a72e-d443-a5ce-17035f3a053c"],
-Cell[1169415, 31728, 43066, 1205, 64, "Output",ExpressionUUID->"c55c5f9e-47dc-fb4a-b80f-57cb771d6116"],
-Cell[1212484, 32935, 2688, 75, 47, "Output",ExpressionUUID->"1f0ae224-6ccc-5447-bd6d-5fb3fd36eb38"]
+Cell[1055882, 28685, 587, 15, 50, "Input",ExpressionUUID->"6ff3e823-a72e-d443-a5ce-17035f3a053c"],
+Cell[1056472, 28702, 43066, 1205, 64, "Output",ExpressionUUID->"c55c5f9e-47dc-fb4a-b80f-57cb771d6116"],
+Cell[1099541, 29909, 2688, 75, 47, "Output",ExpressionUUID->"1f0ae224-6ccc-5447-bd6d-5fb3fd36eb38"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1215209, 33015, 557, 14, 29, "Input",ExpressionUUID->"941cb076-f3f7-b540-8bfa-3292f7b88db8"],
-Cell[1215769, 33031, 24355, 680, 47, "Output",ExpressionUUID->"d1e7c155-154c-4241-89a7-d10e4ba14178"]
+Cell[1102266, 29989, 557, 14, 29, "Input",ExpressionUUID->"941cb076-f3f7-b540-8bfa-3292f7b88db8"],
+Cell[1102826, 30005, 24355, 680, 47, "Output",ExpressionUUID->"d1e7c155-154c-4241-89a7-d10e4ba14178"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1240161, 33716, 511, 13, 29, "Input",ExpressionUUID->"a36f887c-19c2-ef4e-ad76-4053105a16e6"],
-Cell[1240675, 33731, 422, 8, 33, "Output",ExpressionUUID->"8b0c4674-cd8e-4442-843b-0f5b30e0722a"]
+Cell[1127218, 30690, 511, 13, 29, "Input",ExpressionUUID->"a36f887c-19c2-ef4e-ad76-4053105a16e6"],
+Cell[1127732, 30705, 422, 8, 33, "Output",ExpressionUUID->"8b0c4674-cd8e-4442-843b-0f5b30e0722a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1241134, 33744, 276, 6, 29, "Input",ExpressionUUID->"57432b67-67ef-e94a-b5dc-6488bc36ae80"],
-Cell[1241413, 33752, 154, 3, 33, "Output",ExpressionUUID->"1a31b437-8017-7848-8905-71bfb9c40d31"]
+Cell[1128191, 30718, 276, 6, 29, "Input",ExpressionUUID->"57432b67-67ef-e94a-b5dc-6488bc36ae80"],
+Cell[1128470, 30726, 154, 3, 33, "Output",ExpressionUUID->"1a31b437-8017-7848-8905-71bfb9c40d31"]
 }, Open  ]],
-Cell[1241582, 33758, 413, 12, 35, "Text",ExpressionUUID->"d0e6ff5f-8dea-1e49-aed9-5dc3a9e7c276"],
+Cell[1128639, 30732, 413, 12, 35, "Text",ExpressionUUID->"d0e6ff5f-8dea-1e49-aed9-5dc3a9e7c276"],
 Cell[CellGroupData[{
-Cell[1242020, 33774, 4426, 130, 119, "Input",ExpressionUUID->"d06fab10-94e0-7c41-8b3d-c6b1234ea79a"],
+Cell[1129077, 30748, 4426, 130, 119, "Input",ExpressionUUID->"d06fab10-94e0-7c41-8b3d-c6b1234ea79a"],
 Cell[CellGroupData[{
-Cell[1246471, 33908, 496, 14, 23, "Echo",ExpressionUUID->"65e65dfd-2eae-124a-a069-ed9bf6615811"],
-Cell[1246970, 33924, 483, 14, 23, "Echo",ExpressionUUID->"375cabd4-4a25-154c-8657-1e14da58226f"],
-Cell[1247456, 33940, 459, 13, 23, "Echo",ExpressionUUID->"b4ca8080-35c1-4044-a9dc-5ea812b83a70"],
-Cell[1247918, 33955, 434, 13, 23, "Echo",ExpressionUUID->"d6246071-0e7c-f041-adaf-cfa0acff18bf"]
+Cell[1133528, 30882, 496, 14, 23, "Echo",ExpressionUUID->"65e65dfd-2eae-124a-a069-ed9bf6615811"],
+Cell[1134027, 30898, 483, 14, 23, "Echo",ExpressionUUID->"375cabd4-4a25-154c-8657-1e14da58226f"],
+Cell[1134513, 30914, 459, 13, 23, "Echo",ExpressionUUID->"b4ca8080-35c1-4044-a9dc-5ea812b83a70"],
+Cell[1134975, 30929, 434, 13, 23, "Echo",ExpressionUUID->"d6246071-0e7c-f041-adaf-cfa0acff18bf"]
 }, Open  ]]
 }, Open  ]],
-Cell[1248379, 33972, 566, 18, 47, "Input",ExpressionUUID->"6360ebc1-35fd-4c4d-a666-4d8cf6baab2b"],
+Cell[1135436, 30946, 566, 18, 47, "Input",ExpressionUUID->"6360ebc1-35fd-4c4d-a666-4d8cf6baab2b"],
 Cell[CellGroupData[{
-Cell[1248970, 33994, 213, 4, 29, "Input",ExpressionUUID->"e9f5f24c-1a6e-3342-9efd-9567509a9969"],
-Cell[1249186, 34000, 157, 3, 33, "Output",ExpressionUUID->"4bea4478-bad6-cc41-8777-ad731d7987cb"]
+Cell[1136027, 30968, 213, 4, 29, "Input",ExpressionUUID->"e9f5f24c-1a6e-3342-9efd-9567509a9969"],
+Cell[1136243, 30974, 157, 3, 33, "Output",ExpressionUUID->"4bea4478-bad6-cc41-8777-ad731d7987cb"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1249380, 34008, 296, 6, 29, "Input",ExpressionUUID->"fa66ef30-54a3-ad42-a09a-5a67ebc37476"],
-Cell[1249679, 34016, 270, 6, 33, "Output",ExpressionUUID->"86f10c9f-73b8-4440-933e-de5e8d602718"]
+Cell[1136437, 30982, 296, 6, 29, "Input",ExpressionUUID->"fa66ef30-54a3-ad42-a09a-5a67ebc37476"],
+Cell[1136736, 30990, 270, 6, 33, "Output",ExpressionUUID->"86f10c9f-73b8-4440-933e-de5e8d602718"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1249986, 34027, 919, 22, 50, "Input",ExpressionUUID->"436dde5c-8a2e-fc4f-b267-7b12a031ddb1"],
-Cell[1250908, 34051, 417, 8, 33, "Output",ExpressionUUID->"ff9a75fd-2ecd-a547-88f0-b377d05c63bb"],
-Cell[1251328, 34061, 395, 8, 33, "Output",ExpressionUUID->"0796ecc7-fc14-5546-8497-3d2740a1424c"]
+Cell[1137043, 31001, 919, 22, 50, "Input",ExpressionUUID->"436dde5c-8a2e-fc4f-b267-7b12a031ddb1"],
+Cell[1137965, 31025, 417, 8, 33, "Output",ExpressionUUID->"ff9a75fd-2ecd-a547-88f0-b377d05c63bb"],
+Cell[1138385, 31035, 395, 8, 33, "Output",ExpressionUUID->"0796ecc7-fc14-5546-8497-3d2740a1424c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1251760, 34074, 967, 22, 50, "Input",ExpressionUUID->"46de45ef-6c16-344b-a958-83a1bfdfc4c9"],
-Cell[1252730, 34098, 346, 7, 33, "Output",ExpressionUUID->"183f0f58-a048-4542-9dab-391ae23dfa33"],
-Cell[1253079, 34107, 326, 7, 33, "Output",ExpressionUUID->"ff0da581-3503-a048-87ab-129955cd0918"]
+Cell[1138817, 31048, 967, 22, 50, "Input",ExpressionUUID->"46de45ef-6c16-344b-a958-83a1bfdfc4c9"],
+Cell[1139787, 31072, 346, 7, 33, "Output",ExpressionUUID->"183f0f58-a048-4542-9dab-391ae23dfa33"],
+Cell[1140136, 31081, 326, 7, 33, "Output",ExpressionUUID->"ff0da581-3503-a048-87ab-129955cd0918"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1253442, 34119, 221, 4, 45, "Subsubsection",ExpressionUUID->"b22ca38b-ea95-164c-afc6-71f70be84392"],
-Cell[1253666, 34125, 700, 17, 90, "Input",ExpressionUUID->"11b8de5e-11bc-9542-bb95-42745a66d84d"],
-Cell[1254369, 34144, 1089, 26, 110, "Input",ExpressionUUID->"d927570d-b8dc-4bc9-a026-f4a72cc3b251"],
+Cell[1140499, 31093, 221, 4, 45, "Subsubsection",ExpressionUUID->"b22ca38b-ea95-164c-afc6-71f70be84392"],
+Cell[1140723, 31099, 700, 17, 90, "Input",ExpressionUUID->"11b8de5e-11bc-9542-bb95-42745a66d84d"],
+Cell[1141426, 31118, 1089, 26, 110, "Input",ExpressionUUID->"d927570d-b8dc-4bc9-a026-f4a72cc3b251"],
 Cell[CellGroupData[{
-Cell[1255483, 34174, 542, 12, 29, "Input",ExpressionUUID->"5fc6bcf4-bef7-e24a-a16a-00d2f9e5f969"],
-Cell[1256028, 34188, 769, 18, 33, "Output",ExpressionUUID->"8b0f8fe2-7082-437e-b980-6538b144d1e6"]
+Cell[1142540, 31148, 542, 12, 29, "Input",ExpressionUUID->"5fc6bcf4-bef7-e24a-a16a-00d2f9e5f969"],
+Cell[1143085, 31162, 769, 18, 33, "Output",ExpressionUUID->"8b0f8fe2-7082-437e-b980-6538b144d1e6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1256834, 34211, 461, 9, 50, "Input",ExpressionUUID->"22339928-3d3d-4788-ab24-a8f2d0c029e4"],
-Cell[1257298, 34222, 206, 4, 33, "Output",ExpressionUUID->"a6c1fb97-7633-49f1-b31f-49589d7f45ea"],
-Cell[1257507, 34228, 204, 4, 33, "Output",ExpressionUUID->"54b65298-6e8d-4bb0-8589-242f322fc21b"]
+Cell[1143891, 31185, 461, 9, 50, "Input",ExpressionUUID->"22339928-3d3d-4788-ab24-a8f2d0c029e4"],
+Cell[1144355, 31196, 206, 4, 33, "Output",ExpressionUUID->"a6c1fb97-7633-49f1-b31f-49589d7f45ea"],
+Cell[1144564, 31202, 204, 4, 33, "Output",ExpressionUUID->"54b65298-6e8d-4bb0-8589-242f322fc21b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1257748, 34237, 437, 9, 29, "Input",ExpressionUUID->"e28de4db-5f49-4310-9a0a-e4a9b87b5539"],
-Cell[1258188, 34248, 11781, 263, 247, "Output",ExpressionUUID->"2f5ffb73-fd0c-4dc1-9357-9284d94f61e8"]
+Cell[1144805, 31211, 437, 9, 29, "Input",ExpressionUUID->"e28de4db-5f49-4310-9a0a-e4a9b87b5539"],
+Cell[1145245, 31222, 11781, 263, 247, "Output",ExpressionUUID->"2f5ffb73-fd0c-4dc1-9357-9284d94f61e8"]
 }, Open  ]],
-Cell[1269984, 34514, 296, 7, 35, "Text",ExpressionUUID->"9d0dcbca-705b-4f07-849e-b6c58dadecac"],
+Cell[1157041, 31488, 296, 7, 35, "Text",ExpressionUUID->"9d0dcbca-705b-4f07-849e-b6c58dadecac"],
 Cell[CellGroupData[{
-Cell[1270305, 34525, 369, 8, 29, "Input",ExpressionUUID->"bd9cc79e-5c68-464c-9d36-9c1598143664"],
-Cell[1270677, 34535, 178, 3, 33, "Output",ExpressionUUID->"995c2e95-9794-4bfc-badf-bef416835718"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1270892, 34543, 424, 9, 29, "Input",ExpressionUUID->"f0233f06-c004-4fa2-b60d-85aa4cb369a1"],
-Cell[1271319, 34554, 11576, 260, 247, "Output",ExpressionUUID->"6f9cbeef-d75b-4c67-9f3d-52315c6280b4"]
-}, Open  ]]
+Cell[1157362, 31499, 369, 8, 29, "Input",ExpressionUUID->"bd9cc79e-5c68-464c-9d36-9c1598143664"],
+Cell[1157734, 31509, 178, 3, 33, "Output",ExpressionUUID->"995c2e95-9794-4bfc-badf-bef416835718"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1282944, 34820, 242, 6, 45, "Subsubsection",ExpressionUUID->"e7c6c509-c465-c34d-8159-3c682d21d2bb"],
-Cell[CellGroupData[{
-Cell[1283211, 34830, 694, 15, 29, "Input",ExpressionUUID->"0c89819a-5d2f-a64d-ad9a-c4270b450c11"],
-Cell[1283908, 34847, 428, 8, 33, "Output",ExpressionUUID->"af82955d-1e0a-844f-b575-d7f9d5b5c17d"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1284373, 34860, 346, 8, 42, "Input",ExpressionUUID->"bda93101-da8b-2b46-a662-5729d11494ca"],
-Cell[1284722, 34870, 163, 3, 46, "Output",ExpressionUUID->"a250ba16-4efb-254f-aa46-25db233b1f7a"]
-}, Open  ]],
-Cell[1284900, 34876, 2704, 85, 305, "Text",ExpressionUUID->"8ee77fee-709c-8b4b-8d19-e882c2e7f508"],
-Cell[CellGroupData[{
-Cell[1287629, 34965, 382, 11, 50, "Input",ExpressionUUID->"337f3c77-34fb-874a-9a3a-7fa6a100b7a7"],
-Cell[1288014, 34978, 233, 5, 33, "Output",ExpressionUUID->"12dce585-1792-e845-baef-0f1279fe4c38"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1288284, 34988, 421, 8, 50, "Input",ExpressionUUID->"7a3c5f71-7359-9e45-81f5-95a47fea57c8"],
-Cell[1288708, 34998, 181, 3, 33, "Output",ExpressionUUID->"ed3f775e-27ca-c944-9d28-e1fe628cae01"],
-Cell[1288892, 35003, 181, 3, 33, "Output",ExpressionUUID->"3a707c76-1dd3-3542-99b7-84073f7d5724"]
-}, Open  ]]
+Cell[1157949, 31517, 424, 9, 29, "Input",ExpressionUUID->"f0233f06-c004-4fa2-b60d-85aa4cb369a1"],
+Cell[1158376, 31528, 11576, 260, 247, "Output",ExpressionUUID->"6f9cbeef-d75b-4c67-9f3d-52315c6280b4"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1289134, 35013, 157, 3, 67, "Section",ExpressionUUID->"2e08977f-61ae-8645-a977-f3fa64c20419"],
+Cell[1170001, 31794, 242, 6, 45, "Subsubsection",ExpressionUUID->"e7c6c509-c465-c34d-8159-3c682d21d2bb"],
 Cell[CellGroupData[{
-Cell[1289316, 35020, 218, 4, 29, "Input",ExpressionUUID->"2838b5ea-6738-244b-a41c-1b3ba579f930"],
-Cell[1289537, 35026, 256, 4, 33, "Output",ExpressionUUID->"66c06b72-414d-6940-bf63-a8b4fe2038bf"]
+Cell[1170268, 31804, 694, 15, 29, "Input",ExpressionUUID->"0c89819a-5d2f-a64d-ad9a-c4270b450c11"],
+Cell[1170965, 31821, 428, 8, 33, "Output",ExpressionUUID->"af82955d-1e0a-844f-b575-d7f9d5b5c17d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1289830, 35035, 300, 6, 29, "Input",ExpressionUUID->"07074114-ff08-5c40-8c19-01183fc1b7e2"],
-Cell[1290133, 35043, 488, 11, 28, "Message",ExpressionUUID->"ca0c3365-ee19-e44a-859c-2e957e994d43"],
-Cell[1290624, 35056, 211, 4, 33, "Output",ExpressionUUID->"6493876a-02c8-7e4b-a134-d6deedeee530"]
+Cell[1171430, 31834, 346, 8, 42, "Input",ExpressionUUID->"bda93101-da8b-2b46-a662-5729d11494ca"],
+Cell[1171779, 31844, 163, 3, 46, "Output",ExpressionUUID->"a250ba16-4efb-254f-aa46-25db233b1f7a"]
+}, Open  ]],
+Cell[1171957, 31850, 2704, 85, 305, "Text",ExpressionUUID->"8ee77fee-709c-8b4b-8d19-e882c2e7f508"],
+Cell[CellGroupData[{
+Cell[1174686, 31939, 382, 11, 50, "Input",ExpressionUUID->"337f3c77-34fb-874a-9a3a-7fa6a100b7a7"],
+Cell[1175071, 31952, 233, 5, 33, "Output",ExpressionUUID->"12dce585-1792-e845-baef-0f1279fe4c38"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1175341, 31962, 421, 8, 50, "Input",ExpressionUUID->"7a3c5f71-7359-9e45-81f5-95a47fea57c8"],
+Cell[1175765, 31972, 181, 3, 33, "Output",ExpressionUUID->"ed3f775e-27ca-c944-9d28-e1fe628cae01"],
+Cell[1175949, 31977, 181, 3, 33, "Output",ExpressionUUID->"3a707c76-1dd3-3542-99b7-84073f7d5724"]
 }, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1176191, 31987, 157, 3, 67, "Section",ExpressionUUID->"2e08977f-61ae-8645-a977-f3fa64c20419"],
+Cell[1176351, 31992, 432, 10, 29, "Input",ExpressionUUID->"2838b5ea-6738-244b-a41c-1b3ba579f930"]
 }, Open  ]]
 }, Open  ]]
 }
